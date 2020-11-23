@@ -1,32 +1,56 @@
+<style>
+    .reducir {
+        width: 50%;
+    }
+</style>
 <?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Usuario $usuario
  */
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Usuarios'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="usuarios form content">
-            <?= $this->Form->create($usuario) ?>
+<div class="container">
+    <?= $this->Form->create($usuario, ['class' => 'text-center border border-light p-5']) ?>
+    <center>
+        <div class="reducir">
             <fieldset>
-                <legend><?= __('Add Usuario') ?></legend>
+                <p class="h1 mb-4">Sign up</p>
                 <?php
-                    echo $this->Form->control('CC');
-                    echo $this->Form->control('nombre');
-                    echo $this->Form->control('apellidos');
-                    echo $this->Form->control('edad');
-                    echo $this->Form->control('email');
-                    echo $this->Form->control('contraseña');
+                echo $this->Form->control(' ', ['id' => 'CC', 'name' => 'CC', 'type' => 'number', 'min' => '1', 'placeholder' => 'Numero de identificacion', 'class' => 'form-control']);
                 ?>
+                <div class="form-row">
+                    <div class="col">
+                        <!-- First name -->
+                        <?php
+                        echo $this->Form->control(' ', ['id' => 'nombre', 'name' => 'nombre', 'placeholder' => 'First name', 'class' => 'form-control']);
+                        ?>
+                    </div>
+                    <div class="col">
+                        <!-- Last name -->
+                        <?php
+                        echo $this->Form->control(' ', ['id' => 'apellidos', 'name' => 'apellidos', 'placeholder' => 'Last name', 'class' => 'form-control']);
+                        ?>
+                    </div>
+                </div>
+                <?php echo $this->Form->control(' ', ['id' => 'edad', 'name' => 'edad', 'type' => 'number', 'min' => '1', 'placeholder' => 'age', 'class' => 'form-control']); ?>
+                <div class="form-row">
+                    <div class="col">
+                        <!-- First name -->
+                        <?php
+                        echo $this->Form->control(' ', ['id' => 'email', 'name' => 'email', 'placeholder' => 'E-mail', 'class' => 'form-control']);
+                        ?>
+                    </div>
+                    <div class="col">
+                        <!-- Last name -->
+                        <?php
+                        echo $this->Form->control(' ', ['type' => 'password', 'id' => 'contraseña', 'name' => 'contraseña', 'type' => 'password', 'placeholder' => 'Password', 'class' => 'form-control']);
+                        ?>
+                    </div>
+                </div>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <br>
+            <?= $this->Form->button('Submit') ?>
             <?= $this->Form->end() ?>
         </div>
-    </div>
+    </center>
 </div>

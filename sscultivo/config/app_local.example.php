@@ -44,7 +44,7 @@ return [
              */
             //'port' => 'non_standard_port_number',
 
-            'username' => 'my_app',
+            'username' => 'my_root',
             'password' => 'secret',
 
             'database' => 'my_app',

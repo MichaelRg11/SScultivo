@@ -82,7 +82,7 @@ th {
 }
 .top-nav-title a {
     font-size: 2.4rem;
-    color: #d33c43;
+    color: #277548;
 }
 .top-nav-title span {
     color: #404041;
@@ -131,8 +131,8 @@ th {
 }
 .message.error {
     background: #fcebea;
-    color: #cc1f1a;
-    border-color: #ef5753;
+    color: #1f9d55;
+    border-color: #277548;
 }
 
 /* Forms */
