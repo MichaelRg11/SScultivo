@@ -87,14 +87,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             <?= $this->Html->link(__('Servicios'), ['controller' => 'Pages', 'action' => 'services'], ['class' => 'nav-link']) ?>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Acceder a cuenta
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                            <a class="dropdown-item" href="portfolio-1-col.html">Iniciar sesion</a>
-                            <?= $this->Html->link(__('Registrate gratis'), ['controller' => 'Usuarios', 'action' => 'add'], ['class' => 'dropdown-item']) ?>
-                        </div>
+                    <?php if ($_SESSION['id'] == 0 && $_SESSION['nombre'] == "") { ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Acceder a cuenta
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                                <?= $this->Html->link(__('iniciar sesion'), ['controller' => 'Usuarios', 'action' => 'login'], ['class' => 'dropdown-item']) ?>
+                                <?= $this->Html->link(__('Registrate gratis'), ['controller' => 'Usuarios', 'action' => 'add'], ['class' => 'dropdown-item']) ?>
+                            </div>
+                        </li>
+                    <?php } ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Pages
@@ -107,8 +110,19 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     </li>
                     <li class="nav-item">
                         <a>
-                            <?= $this->Html->link(__('Contacto'), ['controller' => 'Pages', 'action' => 'contact'], ['class' => 'nav-link']) ?> </a>
+                            <?= $this->Html->link(__('Contacto'), ['controller' => 'Pages', 'action' => 'contact'], ['class' => 'nav-link']) ?>
+                        </a>
                     </li>
+                    <?php if ($_SESSION['id'] != 0 && $_SESSION['nombre'] != "") { ?>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <?php echo $_SESSION['nombre']; ?>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <?php echo $this->Html->link("Logout", ['controller' => 'Usuarios', 'action' => 'logout'], ['class' => 'nav-link']); ?>
+                        </li>
+                    <?php  } ?>
                 </ul>
             </div>
         </div>
@@ -175,7 +189,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <ul class="footer_ul_amrc">
                         <li class="media">
                             <div class="media-left">
-                            <?= $this->Html->image('post-img-01.jpg') ?>
+                                <?= $this->Html->image('post-img-01.jpg') ?>
                             </div>
                             <div class="media-body">
                                 <p></p>
@@ -184,7 +198,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         </li>
                         <li class="media">
                             <div class="media-left">
-                            <?= $this->Html->image('post-img-02.jpg') ?>
+                                <?= $this->Html->image('post-img-02.jpg') ?>
                             </div>
                             <div class="media-body">
                                 <p>How to find best dog food?</p>
@@ -193,7 +207,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         </li>
                         <li class="media">
                             <div class="media-left">
-                            <?= $this->Html->image('post-img-03.jpg') ?>
+                                <?= $this->Html->image('post-img-03.jpg') ?>
                             </div>
                             <div class="media-body">
                                 <p>How to find best dog food?</p>

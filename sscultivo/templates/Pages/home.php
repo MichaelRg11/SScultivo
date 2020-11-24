@@ -23,6 +23,7 @@ use Cake\Error\Debugger;
 use Cake\Http\Exception\NotFoundException;
 
 $this->disableAutoLayout();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -67,8 +68,8 @@ $this->disableAutoLayout();
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top">
         <div class="container">
-            <a class="navbar-brand">
-                <a> <?= $this->Html->image('logo_ssc.png') ?> </a>
+            <a class="navbar-brand" href="">
+                <?= $this->Html->image('logo_ssc.png') ?>
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fas fa-bars"></span>
@@ -87,18 +88,20 @@ $this->disableAutoLayout();
                     </li>
                     <li class="nav-item">
                         <a>
-                            <?= $this->Html->link(__('Servicios'), ['controller' => 'Pages', 'action' => 'about'], ['class' => 'nav-link']) ?>
+                            <?= $this->Html->link(__('Servicios'), ['controller' => 'Pages', 'action' => 'services'], ['class' => 'nav-link']) ?>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Acceder a cuenta
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                            <a class="dropdown-item" href="portfolio-1-col.html">Iniciar sesion</a>
-                            <?= $this->Html->link(__('Registrate gratis'), ['controller' => 'Usuarios', 'action' => 'add'], ['class' => 'dropdown-item']) ?>
-                        </div>
-                    </li>
+                    <?php if ($_SESSION['id'] == 0 && $_SESSION['nombre'] == "") { ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Acceder a cuenta
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                                <?= $this->Html->link(__('iniciar sesion'), ['controller' => 'Usuarios', 'action' => 'login'], ['class' => 'dropdown-item']) ?>
+                                <?= $this->Html->link(__('Registrate gratis'), ['controller' => 'Usuarios', 'action' => 'add'], ['class' => 'dropdown-item']) ?>
+                            </div>
+                        </li>
+                    <?php } ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Pages
@@ -113,6 +116,16 @@ $this->disableAutoLayout();
                         <a>
                             <?= $this->Html->link(__('Contacto'), ['controller' => 'Pages', 'action' => 'contact'], ['class' => 'nav-link']) ?> </a>
                     </li>
+                    <?php if ($_SESSION['id'] != 0 && $_SESSION['nombre'] != "") { ?>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <?php echo $_SESSION['nombre']; ?>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <?php echo $this->Html->link("Logout", ['controller' => 'Usuarios', 'action' => 'logout'], ['class' => 'nav-link']); ?>
+                        </li>
+                    <?php  } ?>
                 </ul>
             </div>
         </div>

@@ -1,7 +1,10 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
+
+use Cake\Http\Session;
 
 /**
  * Usuarios Controller
@@ -11,6 +14,36 @@ namespace App\Controller;
  */
 class UsuariosController extends AppController
 {
+
+    public function login()
+    {
+        if ($this->request->is('post')) {
+            $email = $_POST["email"];
+            $clave = $_POST["contraseña"];
+            $opciones = array('conditions' => array('Usuarios.email' => $email));
+            $usuarios = $this->Usuarios->find('all', $opciones);
+            $this->set(compact('usuarios'));
+            foreach ($usuarios as $usuario) :
+                if ($usuario->email == $email && $usuario->contraseña == $clave) {
+                    $_SESSION['id'] = $usuario->id_usuario;
+                    $_SESSION['nombre'] = $usuario->nombre . " " . $usuario->apellidos;
+                    $this->redirect(['controller' => 'Pages', 'action' => 'display']);
+                } else {
+                    $this->Flash->error("Incorrect username or password !");
+                }
+            endforeach;
+        }
+    }
+
+    public function logout()
+    {
+        session_destroy();
+        session_start();
+        $_SESSION['id'] = 0;
+        $_SESSION['nombre'] = "";
+        $this->redirect(['controller' => 'Pages', 'action' => 'display']);
+    }
+
     /**
      * Index method
      *
