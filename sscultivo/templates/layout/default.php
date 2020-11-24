@@ -107,7 +107,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarsession">
                                     <a class="dropdown-item" href="faq.html">FAQ</a>
-                                    <a class="dropdown-item" href="404.html">404</a>
+                                    <?php echo $this->Html->link("Registrar cultivo", ['controller' => 'Cultivos', 'action' => 'add'], ['class' => 'dropdown-item']); ?>
                                     <?php echo $this->Html->link("Logout", ['controller' => 'Usuarios', 'action' => 'logout'], ['class' => 'dropdown-item']); ?>
                                 </div>
                             </li>
@@ -219,5 +219,4 @@
         </div>
     </footer>
 </body>
-
 </html>
