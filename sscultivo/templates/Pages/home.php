@@ -91,14 +91,14 @@ session_start();
                             <?= $this->Html->link(__('Servicios'), ['controller' => 'Pages', 'action' => 'services'], ['class' => 'nav-link']) ?>
                         </a>
                     </li>
-                    <?php if ($_SESSION['id'] == 0 && $_SESSION['nombre'] == "") { ?>
+                    <?php if ((!isset($_SESSION['id']) && !isset($_SESSION['nombre'])) || ($_SESSION['id'] == 0 && $_SESSION['nombre'] == "")) { ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Acceder a cuenta
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                                <?= $this->Html->link(__('iniciar sesion'), ['controller' => 'Usuarios', 'action' => 'login'], ['class' => 'dropdown-item']) ?>
-                                <?= $this->Html->link(__('Registrate gratis'), ['controller' => 'Usuarios', 'action' => 'add'], ['class' => 'dropdown-item']) ?>
+                                <?php echo $this->Html->link(__('iniciar sesion'), ['controller' => 'Usuarios', 'action' => 'login'], ['class' => 'dropdown-item']); ?>
+                                <?php echo $this->Html->link(__('Registrate gratis'), ['controller' => 'Usuarios', 'action' => 'add'], ['class' => 'dropdown-item']); ?>
                             </div>
                         </li>
                     <?php } ?>
@@ -116,16 +116,18 @@ session_start();
                         <a>
                             <?= $this->Html->link(__('Contacto'), ['controller' => 'Pages', 'action' => 'contact'], ['class' => 'nav-link']) ?> </a>
                     </li>
-                    <?php if ($_SESSION['id'] != 0 && $_SESSION['nombre'] != "") { ?>
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <?php echo $_SESSION['nombre']; ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <?php echo $this->Html->link("Logout", ['controller' => 'Usuarios', 'action' => 'logout'], ['class' => 'nav-link']); ?>
-                        </li>
-                    <?php  } ?>
+                    <?php if (isset($_SESSION['id']) && isset($_SESSION['nombre'])) {
+                        if ($_SESSION['id'] != 0 && $_SESSION['nombre'] != "") { ?>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <?php echo $_SESSION['nombre']; ?>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <?php echo $this->Html->link("Logout", ['controller' => 'Usuarios', 'action' => 'logout'], ['class' => 'nav-link']); ?>
+                            </li>
+                    <?php  }
+                    } ?>
                 </ul>
             </div>
         </div>

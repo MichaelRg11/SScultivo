@@ -25,8 +25,9 @@ class UsuariosController extends AppController
             $this->set(compact('usuarios'));
             foreach ($usuarios as $usuario) :
                 if ($usuario->email == $email && $usuario->contraseña == $clave) {
-                    $_SESSION['id'] = $usuario->id_usuario;
-                    $_SESSION['nombre'] = $usuario->nombre . " " . $usuario->apellidos;
+                    session_start();
+                    echo $_SESSION['id'] = $usuario->id_usuario;
+                    echo $_SESSION['nombre'] = $usuario->nombre . " " . $usuario->apellidos;
                     $this->redirect(['controller' => 'Pages', 'action' => 'display']);
                 } else {
                     $this->Flash->error("Incorrect username or password !");
