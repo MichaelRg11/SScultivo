@@ -14,8 +14,6 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  * @var \App\View\AppView $this
  */
-
-$cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +27,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <meta name="author" content="">
         <title>SSCultivo</title>
         <!-- Bootstrap core CSS -->
-        <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake']) ?>
         <?= $this->Html->css(['all', 'style']) ?>
         <?= $this->fetch('meta') ?>
         <?= $this->fetch('css') ?>
@@ -98,29 +95,21 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             </div>
                         </li>
                     <?php } ?>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pages
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                            <a class="dropdown-item" href="faq.html">FAQ</a>
-                            <a class="dropdown-item" href="404.html">404</a>
-                            <a class="dropdown-item" href="pricing.html">Pricing Table</a>
-                        </div>
-                    </li>
                     <li class="nav-item">
                         <a>
                             <?= $this->Html->link(__('Contacto'), ['controller' => 'Pages', 'action' => 'contact'], ['class' => 'nav-link']) ?> </a>
                     </li>
                     <?php if (isset($_SESSION['id']) && isset($_SESSION['nombre'])) {
                         if ($_SESSION['id'] != 0 && $_SESSION['nombre'] != "") { ?>
-                            <li class="nav-item">
-                                <a class="nav-link">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarsession" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <?php echo $_SESSION['nombre']; ?>
                                 </a>
-                            </li>
-                            <li class="nav-item">
-                                <?php echo $this->Html->link("Logout", ['controller' => 'Usuarios', 'action' => 'logout'], ['class' => 'nav-link']); ?>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarsession">
+                                    <a class="dropdown-item" href="faq.html">FAQ</a>
+                                    <a class="dropdown-item" href="404.html">404</a>
+                                    <?php echo $this->Html->link("Logout", ['controller' => 'Usuarios', 'action' => 'logout'], ['class' => 'dropdown-item']); ?>
+                                </div>
                             </li>
                     <?php  }
                     } ?>
@@ -128,7 +117,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </div>
         </div>
     </nav>
-
     <?= $this->Flash->render() ?>
     <?= $this->fetch('content') ?>
 
