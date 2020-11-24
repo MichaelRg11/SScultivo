@@ -49,7 +49,7 @@
                 </div>
             </fieldset>
             <br>
-            <?= $this->Form->button('Submit') ?>
+            <?= $this->Form->button('Registrar', ['class' => 'btn btn-success']) ?>
             <?= $this->Form->end() ?>
         </div>
     </center>

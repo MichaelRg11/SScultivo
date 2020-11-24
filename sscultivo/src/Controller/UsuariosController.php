@@ -84,9 +84,7 @@ class UsuariosController extends AppController
         if ($this->request->is('post')) {
             $usuario = $this->Usuarios->patchEntity($usuario, $this->request->getData());
             if ($this->Usuarios->save($usuario)) {
-                $this->Flash->success(__('The usuario has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Usuarios', 'action' => 'login']);
             }
             $this->Flash->error(__('The usuario could not be saved. Please, try again.'));
         }

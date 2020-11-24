@@ -25,7 +25,7 @@ session_start();
                     ?>
                 </fieldset>
                 <br>
-                <?= $this->Form->button('Submit') ?>
+                <?= $this->Form->button('Iniciar', ['class' => 'btn btn-success']) ?>
                 <?= $this->Form->end() ?>
             </div>
         </center>
