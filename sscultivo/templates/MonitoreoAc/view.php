@@ -97,18 +97,9 @@ session_start();
                     label: '# of Votes',
                     data: [<?= h($monitoreoAc->temperatura) ?>, <?= h($monitoreoAc->nitrogeno) ?>, <?= h($monitoreoAc->nitritos) ?>, <?= h($monitoreoAc->oxigeno_disuelto) ?>,
                     <?= h($monitoreoAc->proteina_alimento) ?>, <?= h($monitoreoAc->ph) ?>, <?= h($monitoreoAc->tiempo_crecimiento) ?>, <?= h($monitoreoAc->exposicion_solar) ?>],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
+                    backgroundColor:colorRGB,
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
+                        'rgba(29, 185, 18, 1)',
                         'rgba(54, 162, 235, 1)',
                         'rgba(255, 206, 86, 1)',
                         'rgba(75, 192, 192, 1)',
@@ -130,4 +121,24 @@ session_start();
                 }
             }
         });
+
+    function generarNumero(numero){
+        return (Math.random()*numero).toFixed(0);
+    }
+
+    function colorRGB(){
+        var variable = [<?=h($monitoreoAc->temperatura) ?>,<?= h($monitoreoAc->nitrogeno) ?>,
+        <?= h($monitoreoAc->temperatura)?>,<?=h($monitoreoAc->temperatura)?>,
+        <?= h($monitoreoAc->temperatura)?>,<?=h($monitoreoAc->temperatura)?>,
+        <?= h($monitoreoAc->temperatura)?>,<?=h($monitoreoAc->temperatura)?>];
+        var colores = [];
+        for(var i=0; i<8; i++){
+            if(i==0){
+            if(variable[i]>=15){
+            return "rgb(13, 190, 48)"; 
+                }
+            }
+        }          
+    }
+
 </script>
