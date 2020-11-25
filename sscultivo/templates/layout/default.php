@@ -47,12 +47,8 @@
         <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
         <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
 
-        <script src="https://use.fontawesome.com/fc46943e67.js"></script>
-        <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	Fontawesome CSS
-	link href="css/all.css" rel="stylesheet">
-	 Custom styles for this template
-	<link href="css/style.css" rel="stylesheet">-->
+        <!--Fontawesome-->
+        <script src="https://kit.fontawesome.com/a97bdbf67d.js" crossorigin="anonymous"></script>
     </head>
 
 </head>
@@ -102,13 +98,23 @@
                     <?php if (isset($_SESSION['id']) && isset($_SESSION['nombre'])) {
                         if ($_SESSION['id'] != 0 && $_SESSION['nombre'] != "") { ?>
                             <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Cultivos
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                                    <?php echo $this->Html->link("Listado de cultivos", ['controller' => 'Cultivos', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
+                                    <?php echo $this->Html->link("Registrar cultivo", ['controller' => 'Cultivos', 'action' => 'add'], ['class' => 'dropdown-item']); ?>
+                                    <?php echo $this->Html->link("Agregar variables de monitoreo AC", ['controller' => 'MonitoreoAc', 'action' => 'add'], ['class' => 'dropdown-item']); ?>
+                                    <?php echo $this->Html->link("Agregar variables de monitoreo TR", ['controller' => 'MonitoreoTr', 'action' => 'add'], ['class' => 'dropdown-item']); ?>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarsession" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <?php echo $_SESSION['nombre']; ?>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarsession">
-                                    <a class="dropdown-item" href="faq.html">FAQ</a>
-                                    <?php echo $this->Html->link("Registrar cultivo", ['controller' => 'Cultivos', 'action' => 'add'], ['class' => 'dropdown-item']); ?>
-                                    <?php echo $this->Html->link("Logout", ['controller' => 'Usuarios', 'action' => 'logout'], ['class' => 'dropdown-item']); ?>
+                                
+                                    <?php echo $this->Html->link('<i class="fas fa-sign-out-alt" style="font-size: 15px"> Salir</i>', ['controller' => 'Usuarios', 'action' => 'logout'], ['escape' => false, 'class' => 'text-muted']); ?>
                                 </div>
                             </li>
                     <?php  }
@@ -219,4 +225,5 @@
         </div>
     </footer>
 </body>
+
 </html>

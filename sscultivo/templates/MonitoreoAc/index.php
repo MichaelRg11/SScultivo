@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\MonitoreoAc[]|\Cake\Collection\CollectionInterface $monitoreoAc
  */
+session_start();
 ?>
 <div class="monitoreoAc index content">
     <?= $this->Html->link(__('New Monitoreo Ac'), ['action' => 'add'], ['class' => 'button float-right']) ?>

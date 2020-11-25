@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\MonitoreoTr[]|\Cake\Collection\CollectionInterface $monitoreoTr
  */
+session_start();
 ?>
 <div class="monitoreoTr index content">
     <?= $this->Html->link(__('New Monitoreo Tr'), ['action' => 'add'], ['class' => 'button float-right']) ?>

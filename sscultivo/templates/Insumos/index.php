@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Insumo[]|\Cake\Collection\CollectionInterface $insumos
  */
+session_start();
 ?>
 <div class="insumos index content">
     <?= $this->Html->link(__('New Insumo'), ['action' => 'add'], ['class' => 'button float-right']) ?>

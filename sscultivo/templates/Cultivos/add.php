@@ -25,7 +25,7 @@ session_start();
                     'onchange' => 'desplegar();'
                 ])
                 ?>
-                <div id="datos" style="display:none;">
+                <div class="form-row" id="datos" style="display:none;">
                     <div class="col">
                         <?php
                         echo $this->Form->control(' ', ['id' => 'nombre', 'name' => 'nombre', 'placeholder' => 'Nombre del cultivo', 'class' => 'form-control']);
@@ -38,7 +38,7 @@ session_start();
                     </div>
                 </div>
                 <!-- campos Peces -->
-                <div id="peces" style="display:none;">
+                <div class="form-row" id="peces" style="display:none;">
                     <div class="col">
                         <?php
                         echo $this->Form->control(' ', ['id' => 'pez', 'name' => 'pez', 'placeholder' => 'Nombre del pez', 'class' => 'form-control']);
@@ -51,7 +51,7 @@ session_start();
                     </div>
                 </div>
                 <!-- Campos Plantas -->
-                <div id="plantas" style="display:none;">
+                <div class="form-row" id="plantas" style="display:none;">
                     <div class="col">
                         <?php
                         echo $this->Form->control(' ', ['id' => 'planta', 'name' => 'planta', 'placeholder' => 'Nombre de la planta', 'class' => 'form-control']);
@@ -76,18 +76,18 @@ session_start();
     function desplegar() {
         let tipo = document.getElementById("tipo_cultivo").value;
         if (tipo == 'Tierra') {
-            // document.getElementById("datos").style = "block";
-            document.getElementById("datos").style = "form-row block";
-            // document.getElementById("plantas").style.display = "block";
-            document.getElementById("plantas").style = "form-row block";
+            document.getElementById("datos").style = "block";
+            document.getElementById("datos").style = "form-row";
+            document.getElementById("plantas").style.display = "block";
+            document.getElementById("plantas").style = "form-row";
             document.getElementById("peces").style.display = "none";
         } else if (tipo == 'Acuaponico') {
-            // document.getElementById("datos").style.display = "block";
-            document.getElementById("datos").style = "form-row block";
-            // document.getElementById("plantas").style.display = "block";
-            document.getElementById("plantas").style = "form-row block";
-            // document.getElementById("peces").style.display = "block";
-            document.getElementById("peces").style = "form-row block";
+            document.getElementById("datos").style.display = "block";
+            document.getElementById("datos").style = "form-row";
+            document.getElementById("plantas").style.display = "block";
+            document.getElementById("plantas").style = "form-row";
+            document.getElementById("peces").style.display = "block";
+            document.getElementById("peces").style = "form-row";
         } else {
             document.getElementById("datos").style.display = "none";
             document.getElementById("plantas").style.display = "none";

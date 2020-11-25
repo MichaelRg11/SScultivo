@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Insumo $insumo
  */
+session_start();
 ?>
 <div class="row">
     <aside class="column">

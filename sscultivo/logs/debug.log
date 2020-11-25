@@ -4840,3 +4840,286 @@ Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
 Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 [main] - ROOT\webroot\index.php, line 40
 
+2020-11-24 22:42:41 Notice: Notice (8): Undefined index: id in [D:\Xampp\htdocs\SScultivo\sscultivo\templates\Cultivos\add.php, line 66]
+Request URL: /cultivos/add
+Referer URL: http://localhost/SScultivo/sscultivo/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Cultivos\add.php, line 66
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::render() - CORE\src\View\View.php, line 764
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 538
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 22:45:37 Notice: Notice (8): Undefined index: id in [D:\Xampp\htdocs\SScultivo\sscultivo\templates\Cultivos\add.php, line 66]
+Request URL: /cultivos/add
+Referer URL: http://localhost/SScultivo/sscultivo/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Cultivos\add.php, line 66
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::render() - CORE\src\View\View.php, line 764
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 538
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 23:45:12 Notice: Notice (8): Undefined variable: cliente in [D:\Xampp\htdocs\SScultivo\sscultivo\templates\layout\default.php, line 115]
+Request URL: /
+Referer URL: http://localhost/SScultivo/sscultivo/usuarios/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\layout\default.php, line 115
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 816
+Cake\View\View::render() - CORE\src\View\View.php, line 775
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+App\Controller\PagesController::display() - APP/Controller\PagesController.php, line 65
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 23:45:12 Notice: Notice (8): Trying to get property 'id' of non-object in [D:\Xampp\htdocs\SScultivo\sscultivo\templates\layout\default.php, line 115]
+Request URL: /
+Referer URL: http://localhost/SScultivo/sscultivo/usuarios/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\layout\default.php, line 115
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 816
+Cake\View\View::render() - CORE\src\View\View.php, line 775
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+App\Controller\PagesController::display() - APP/Controller\PagesController.php, line 65
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 23:45:53 Notice: Notice (8): Undefined variable: cliente in [D:\Xampp\htdocs\SScultivo\sscultivo\templates\layout\default.php, line 115]
+Request URL: /
+Referer URL: http://localhost/SScultivo/sscultivo/usuarios/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\layout\default.php, line 115
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 816
+Cake\View\View::render() - CORE\src\View\View.php, line 775
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+App\Controller\PagesController::display() - APP/Controller\PagesController.php, line 65
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 23:45:53 Notice: Notice (8): Trying to get property 'id' of non-object in [D:\Xampp\htdocs\SScultivo\sscultivo\templates\layout\default.php, line 115]
+Request URL: /
+Referer URL: http://localhost/SScultivo/sscultivo/usuarios/login
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\layout\default.php, line 115
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 816
+Cake\View\View::render() - CORE\src\View\View.php, line 775
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+App\Controller\PagesController::display() - APP/Controller\PagesController.php, line 65
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-25 00:09:55 Notice: Notice (8): Undefined variable: cliente in [D:\Xampp\htdocs\SScultivo\sscultivo\templates\Cultivos\index.php, line 43]
+Request URL: /cultivos
+Referer URL: http://localhost/SScultivo/sscultivo/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Cultivos\index.php, line 43
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::render() - CORE\src\View\View.php, line 764
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 538
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-25 00:09:55 Notice: Notice (8): Trying to get property 'id' of non-object in [D:\Xampp\htdocs\SScultivo\sscultivo\templates\Cultivos\index.php, line 43]
+Request URL: /cultivos
+Referer URL: http://localhost/SScultivo/sscultivo/
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Cultivos\index.php, line 43
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::render() - CORE\src\View\View.php, line 764
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 538
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-25 00:26:08 Notice: Notice (1024): Undefined property: MonitoreoTrController::$MonitoreoTr in D:\Xampp\htdocs\SScultivo\sscultivo\src\Controller\MonitoreoTrController.php on line 21 in [D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\Controller.php, line 319]
+Request URL: /monitoreotr
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Controller\Controller::__get() - CORE\src\Controller\Controller.php, line 319
+App\Controller\MonitoreoTrController::index() - APP/Controller\MonitoreoTrController.php, line 21
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+

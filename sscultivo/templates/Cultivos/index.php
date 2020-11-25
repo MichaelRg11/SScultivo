@@ -1,58 +1,72 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Cultivo[]|\Cake\Collection\CollectionInterface $cultivos
  */
+session_start();
 ?>
-<div class="cultivos index content">
-    <?= $this->Html->link(__('New Cultivo'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Cultivos') ?></h3>
-    <div class="table-responsive">
-        <table>
-            <thead>
-                <tr>
-                    <th><?= $this->Paginator->sort('id_cultivos') ?></th>
-                    <th><?= $this->Paginator->sort('tipo_cultivo') ?></th>
-                    <th><?= $this->Paginator->sort('nombre') ?></th>
-                    <th><?= $this->Paginator->sort('fecha') ?></th>
-                    <th><?= $this->Paginator->sort('pez') ?></th>
-                    <th><?= $this->Paginator->sort('cantidad_pez') ?></th>
-                    <th><?= $this->Paginator->sort('planta') ?></th>
-                    <th><?= $this->Paginator->sort('cantidad_planta') ?></th>
-                    <th><?= $this->Paginator->sort('usuario_id') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($cultivos as $cultivo): ?>
-                <tr>
-                    <td><?= $this->Number->format($cultivo->id_cultivos) ?></td>
-                    <td><?= h($cultivo->tipo_cultivo) ?></td>
-                    <td><?= h($cultivo->nombre) ?></td>
-                    <td><?= h($cultivo->fecha) ?></td>
-                    <td><?= h($cultivo->pez) ?></td>
-                    <td><?= $this->Number->format($cultivo->cantidad_pez) ?></td>
-                    <td><?= h($cultivo->planta) ?></td>
-                    <td><?= $this->Number->format($cultivo->cantidad_planta) ?></td>
-                    <td><?= $cultivo->has('usuario') ? $this->Html->link($cultivo->usuario->id_usuario, ['controller' => 'Usuarios', 'action' => 'view', $cultivo->usuario->id_usuario]) : '' ?></td>
-                    <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $cultivo->id_cultivos]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cultivo->id_cultivos]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $cultivo->id_cultivos], ['confirm' => __('Are you sure you want to delete # {0}?', $cultivo->id_cultivos)]) ?>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    </div>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
-    </div>
+<div class="container">
+    <center>
+        <p class="h1 mb-4">Lista de cultivos</p>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"><?= $this->Paginator->sort('id_cultivos') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('tipo_cultivo') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('nombre') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('fecha') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('pez') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('cantidad_pez') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('planta') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('cantidad_planta') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('usuario_id') ?></th>
+                        <th class="actions"><?= __('Actions') ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($cultivos as $cultivo) : ?>
+                        <tr>
+                            <td scope="row"><?= $this->Number->format($cultivo->id_cultivos) ?></td>
+                            <td><?= h($cultivo->tipo_cultivo) ?></td>
+                            <td><?= h($cultivo->nombre) ?></td>
+                            <td><?= h($cultivo->fecha) ?></td>
+                            <td><?= h($cultivo->pez) ?></td>
+                            <td><?= $this->Number->format($cultivo->cantidad_pez) ?></td>
+                            <td><?= h($cultivo->planta) ?></td>
+                            <td><?= $this->Number->format($cultivo->cantidad_planta) ?></td>
+                            <td><?= $cultivo->has('usuario') ? $this->Html->link($cultivo->usuario->id_usuario, ['controller' => 'Usuarios', 'action' => 'view', $cultivo->usuario->id_usuario]) : '' ?></td>
+                            <td class="actions">
+                                <?= $this->Html->link(__('<i class="fa fa-eye" style="font-size:15px"></i>'), ['action' => 'view', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-success', 'title' => 'Ver Cliente']) ?>
+                                <?= $this->Html->link(__('<i class="fas fa-pencil-alt" style="font-size:15px"></i>'), ['action' => 'edit', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-info', 'title' => 'Editar Cliente']) ?>
+                                <?= $this->Form->postLink(__('<i class="fa fa-trash" style="font-size:15px"></i>'), ['action' => 'delete', $cultivo->id_cultivos], ['confirm' => __('Estás seguro de que quieres eliminar el # {0}?', $cultivo->id), 'escape' => false, 'class' => 'btn btn-danger', 'title' => 'Eliminar Cliente']) ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="paginator container">
+            <div class="row align-items-start">
+                <div class="col"> 
+                    <?= $this->Paginator->first('<< ' . __('first')) ?>
+                </div>
+                <div class="col">
+                    <?= $this->Paginator->prev('< ' . __('previous')) ?>
+                </div>
+                <div class="col">
+                    <?= $this->Paginator->numbers() ?>
+                </div>
+                <div class="col">
+                    <?= $this->Paginator->next(__('next') . ' >') ?>
+                </div>
+                <div class="col">
+                    <?= $this->Paginator->last(__('last') . ' >>') ?>
+                </div>
+            </div>
+            <p><?= $this->Paginator->counter(__('Pagina {{page}} de {{pages}}, Cargados {{current}} Registros de {{count}} en total')) ?></p>
+        </div>
+    </center>
 </div>
