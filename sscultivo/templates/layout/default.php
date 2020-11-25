@@ -103,6 +103,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                                     <?php echo $this->Html->link("Listado de cultivos", ['controller' => 'Cultivos', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
+                                    <?php echo $this->Html->link("Listado de insumos", ['controller' => 'Insumos', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
                                     <?php echo $this->Html->link("Listado de monitoreo AC", ['controller' => 'MonitoreoAc', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
                                     <?php echo $this->Html->link("Listado de monitoreo TR", ['controller' => 'MonitoreoTr', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
                                 </div>
@@ -112,8 +113,8 @@
                                     <?php echo $_SESSION['nombre']; ?>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarsession">
-                                    <?php echo $this->Html->link('<i class="fa fa-eye" style="font-size:15px"> Informacion</i>', ['controller' => 'Usuarios', 'action' => 'logout'], ['escape' => false, 'class' => 'text-muted']); ?>
-                                    <?php echo $this->Html->link('<i class="fas fa-sign-out-alt" style="font-size: 15px"> Salir</i>', ['controller' => 'Usuarios', 'action' => 'logout'], ['escape' => false, 'class' => 'text-muted']); ?>
+                                    <?php echo $this->Html->link('<i class="fas fa-id-card" style="font-size:15px"> Mi perfil</i>     ', ['controller' => 'Usuarios', 'action' => 'view', $_SESSION['id']], ['escape' => false, 'class' => 'text-muted dropdown-item']); ?>
+                                    <?php echo $this->Html->link('<i class="fas fa-sign-out-alt" style="font-size: 15px"> Salir</i>', ['controller' => 'Usuarios', 'action' => 'logout'], ['escape' => false, 'class' => 'text-muted dropdown-item']); ?>
                                 </div>
                             </li>
                     <?php  }

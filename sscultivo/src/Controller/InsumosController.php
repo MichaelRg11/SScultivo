@@ -18,10 +18,14 @@ class InsumosController extends AppController
      */
     public function index()
     {
+        session_start();
         $this->paginate = [
             'contain' => ['Cultivos'],
         ];
-        $insumos = $this->paginate($this->Insumos);
+
+        $opciones = array('conditions' => array('Cultivos.usuario_id' => $_SESSION['id']));
+
+        $insumos = $this->paginate($this->Insumos->find('All', $opciones));
 
         $this->set(compact('insumos'));
     }
