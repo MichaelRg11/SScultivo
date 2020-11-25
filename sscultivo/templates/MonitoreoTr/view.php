@@ -31,10 +31,6 @@ session_start();
                 <td><?= h($monitoreoTr->dioxidoCB) ?></td>
             </tr>
             <tr>
-                <th><?= __('Comentario') ?></th>
-                <td><?= h($monitoreoTr->comentario) ?></td>
-            </tr>
-            <tr>
                 <th><?= __('Idmonitoreo TR') ?></th>
                 <td><?= $this->Number->format($monitoreoTr->idmonitoreo_TR) ?></td>
             </tr>
@@ -49,6 +45,10 @@ session_start();
             <tr>
                 <th><?= __('Fecha TR') ?></th>
                 <td><?= h($monitoreoTr->fecha_TR) ?></td>
+            </tr>
+            <tr>
+                <th><?= __('Comentario') ?></th>
+                <td><?= h($monitoreoTr->comentario) ?></td>
             </tr>
         </table>
         <div class="mb-2">
