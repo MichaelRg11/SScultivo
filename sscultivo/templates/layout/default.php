@@ -103,7 +103,6 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                                     <?php echo $this->Html->link("Listado de cultivos", ['controller' => 'Cultivos', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
-                                    <?php echo $this->Html->link("Registrar cultivo", ['controller' => 'Cultivos', 'action' => 'add'], ['class' => 'dropdown-item']); ?>
                                     <?php echo $this->Html->link("Listado de monitoreo AC", ['controller' => 'MonitoreoAc', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
                                     <?php echo $this->Html->link("Listado de monitoreo TR", ['controller' => 'MonitoreoTr', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
                                 </div>
@@ -113,7 +112,7 @@
                                     <?php echo $_SESSION['nombre']; ?>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarsession">
-                                
+
                                     <?php echo $this->Html->link('<i class="fas fa-sign-out-alt" style="font-size: 15px"> Salir</i>', ['controller' => 'Usuarios', 'action' => 'logout'], ['escape' => false, 'class' => 'text-muted']); ?>
                                 </div>
                             </li>

@@ -8,7 +8,8 @@ session_start();
 ?>
 <div class="container">
     <center>
-        <p class="h1 mb-4">Lista de cultivos</p>
+        <p class="h1 mb-2">Lista de cultivos</p>
+        <?= $this->Html->link(__('Nuevo cultivo'), ['action' => 'add'], ['class' => 'btn btn-primary offset-md-8 h1 mb-2']) ?>
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -47,7 +48,7 @@ session_start();
         </div>
         <div class="paginator container">
             <div class="row align-items-start">
-                <div class="col"> 
+                <div class="col">
                     <?= $this->Paginator->first('<< ' . __('first')) ?>
                 </div>
                 <div class="col">
