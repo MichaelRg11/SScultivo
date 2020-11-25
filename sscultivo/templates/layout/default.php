@@ -104,8 +104,8 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                                     <?php echo $this->Html->link("Listado de cultivos", ['controller' => 'Cultivos', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
                                     <?php echo $this->Html->link("Registrar cultivo", ['controller' => 'Cultivos', 'action' => 'add'], ['class' => 'dropdown-item']); ?>
-                                    <?php echo $this->Html->link("Agregar variables de monitoreo AC", ['controller' => 'MonitoreoAc', 'action' => 'add'], ['class' => 'dropdown-item']); ?>
-                                    <?php echo $this->Html->link("Agregar variables de monitoreo TR", ['controller' => 'MonitoreoTr', 'action' => 'add'], ['class' => 'dropdown-item']); ?>
+                                    <?php echo $this->Html->link("Listado de monitoreo AC", ['controller' => 'MonitoreoAc', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
+                                    <?php echo $this->Html->link("Listado de monitoreo TR", ['controller' => 'MonitoreoTr', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">

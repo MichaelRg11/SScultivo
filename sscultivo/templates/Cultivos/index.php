@@ -38,8 +38,8 @@ session_start();
                             <td><?= $this->Number->format($cultivo->cantidad_planta) ?></td>
                             <td><?= $cultivo->has('usuario') ? $this->Html->link($cultivo->usuario->id_usuario, ['controller' => 'Usuarios', 'action' => 'view', $cultivo->usuario->id_usuario]) : '' ?></td>
                             <td class="actions">
-                                <?= $this->Html->link(__('<i class="fa fa-eye" style="font-size:15px"></i>'), ['action' => 'view', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-success', 'title' => 'Ver Cliente']) ?>
-                                <?= $this->Html->link(__('<i class="fas fa-pencil-alt" style="font-size:15px"></i>'), ['action' => 'edit', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-info', 'title' => 'Editar Cliente']) ?>
+                                <?= $this->Html->link(__('<i class="fa fa-eye" style="font-size:15px"></i>'), ['action' => 'view', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-success', 'title' => 'Ver Cultivo']) ?>
+                                <?= $this->Html->link(__('<i class="fas fa-pencil-alt" style="font-size:15px"></i>'), ['action' => 'edit', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-info', 'title' => 'Editar Cultivo']) ?>
                                 <?= $this->Form->postLink(__('<i class="fa fa-trash" style="font-size:15px"></i>'), ['action' => 'delete', $cultivo->id_cultivos], ['confirm' => __('Estás seguro de que quieres eliminar el # {0}?', $cultivo->id), 'escape' => false, 'class' => 'btn btn-danger', 'title' => 'Eliminar Cliente']) ?>
                             </td>
                         </tr>
@@ -47,7 +47,6 @@ session_start();
                 </tbody>
             </table>
         </div>
-
         <div class="paginator container">
             <div class="row align-items-start">
                 <div class="col"> 
