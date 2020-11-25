@@ -46,7 +46,7 @@ session_start();
                             <td><?= h($monitoreoAc->exposicion_solar) ?></td>
                             <td><?= h($monitoreoAc->comentario) ?></td>
                             <td>
-                                <?= $monitoreoAc->has('cultivo') ? $this->Html->link($monitoreoAc->cultivos_id2, ['controller' => 'Cultivos', 'action' => 'view', $monitoreoAc->cultivos_id2]) : '' ?></td>
+                                <?= $monitoreoAc->has('cultivo') ? $this->Html->link($monitoreoAc->cultivos_id2 . " " . $monitoreoAc->cultivo->nombre, ['controller' => 'Cultivos', 'action' => 'view', $monitoreoAc->cultivos_id2]) : '' ?></td>
                             </td>
                             <td class="actions">
                                 <?= $this->Html->link(__('<i class="fa fa-eye" style="font-size:15px"></i>'), ['action' => 'view', $monitoreoAc->idmonitoreo_AC], ['escape' => false, 'class' => 'btn btn-success', 'title' => 'Ver Monitoreo']) ?>
