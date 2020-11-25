@@ -103,6 +103,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                                     <?php echo $this->Html->link("Listado de cultivos", ['controller' => 'Cultivos', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
+                                    <?php echo $this->Html->link("Listado de insumos", ['controller' => 'Insumos', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
                                     <?php echo $this->Html->link("Listado de monitoreo AC", ['controller' => 'MonitoreoAc', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
                                     <?php echo $this->Html->link("Listado de monitoreo TR", ['controller' => 'MonitoreoTr', 'action' => 'index'], ['class' => 'dropdown-item']); ?>
                                 </div>
