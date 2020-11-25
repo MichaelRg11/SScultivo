@@ -44,7 +44,7 @@ session_start();
         </fieldset>
         <div class="form-row mb-2">
             <div class="col mb-2">
-                <?= $this->Form->button('Guardar cultivo', ['class' => 'btn btn-success']) ?>
+                <?= $this->Form->button('Guardar monitoreo', ['class' => 'btn btn-success']) ?>
                 <?= $this->Form->postLink(
                     __('Delete'),
                     ['action' => 'delete', $monitoreoTr->idmonitoreo_TR],

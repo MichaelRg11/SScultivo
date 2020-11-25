@@ -4,7 +4,6 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Cultivo[]|\Cake\Collection\CollectionInterface $cultivos
  */
-session_start();
 ?>
 <div class="container">
     <center>

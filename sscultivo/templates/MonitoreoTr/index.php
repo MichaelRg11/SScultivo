@@ -4,7 +4,6 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\MonitoreoTr[]|\Cake\Collection\CollectionInterface $monitoreoTr
  */
-session_start();
 ?>
 <div class="container">
     <br>
