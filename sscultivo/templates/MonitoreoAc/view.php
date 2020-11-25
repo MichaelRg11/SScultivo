@@ -98,12 +98,7 @@ session_start();
                     data: [<?= h($monitoreoAc->temperatura) ?>, <?= h($monitoreoAc->nitrogeno) ?>, <?= h($monitoreoAc->nitritos) ?>, <?= h($monitoreoAc->oxigeno_disuelto) ?>,
                     <?= h($monitoreoAc->proteina_alimento) ?>, <?= h($monitoreoAc->ph) ?>, <?= h($monitoreoAc->tiempo_crecimiento) ?>, <?= h($monitoreoAc->exposicion_solar) ?>],
                     backgroundColor: [
-                        <?php
-                            $temperatura=$monitoreoAc->temperatura;
-                            echo $temperatura;
-                            if($temperatura>0){?>
-                            'rgba(255, 99, 132, 0.2)',
-                           <?php }?>
+                        'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
                         'rgba(255, 206, 86, 0.2)',
                         'rgba(75, 192, 192, 0.2)',
