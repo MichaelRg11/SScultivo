@@ -113,8 +113,13 @@
                                     <?php echo $_SESSION['nombre']; ?>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarsession">
+<<<<<<< HEAD
                                     <?php echo $this->Html->link('<i class="fas fa-id-card" style="font-size:15px"> Mi perfil</i>     ', ['controller' => 'Usuarios', 'action' => 'view', $_SESSION['id']], ['escape' => false, 'class' => 'text-muted dropdown-item']); ?>
                                     <?php echo $this->Html->link('<i class="fas fa-sign-out-alt" style="font-size: 15px"> Salir</i>', ['controller' => 'Usuarios', 'action' => 'logout'], ['escape' => false, 'class' => 'text-muted dropdown-item']); ?>
+=======
+                                    <?php echo $this->Html->link('<i class="fa fa-eye" style="font-size:15px"> Informacion</i>', ['controller' => 'Usuarios', 'action' => 'logout'], ['escape' => false, 'class' => 'text-muted']); ?>
+                                    <?php echo $this->Html->link('<i class="fas fa-sign-out-alt" style="font-size: 15px"> Salir</i>', ['controller' => 'Usuarios', 'action' => 'logout'], ['escape' => false, 'class' => 'text-muted']); ?>
+>>>>>>> parent of d1e6473... Revert "Merge branch 'main' of https://github.com/maicolrg11/SScultivo into main"
                                 </div>
                             </li>
                     <?php  }

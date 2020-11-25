@@ -4,7 +4,6 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\MonitoreoTr[]|\Cake\Collection\CollectionInterface $monitoreoTr
  */
-session_start();
 ?>
 <div class="container">
     <br>
@@ -41,7 +40,7 @@ session_start();
                             <td><?= h($monitoreoTr->dioxidoCB) ?></td>
                             <td><?= h($monitoreoTr->comentario) ?></td>
                             <td>
-                                <?= $monitoreoTr->has('cultivo') ? $this->Html->link($monitoreoTr->cultivos_id1, ['controller' => 'Cultivos', 'action' => 'view', $monitoreoTr->cultivos_id1]) : '' ?></td>
+                                <?= $monitoreoTr->has('cultivo') ? $this->Html->link($monitoreoTr->cultivos_id1 . " " . $monitoreoTr->cultivo->nombre, ['controller' => 'Cultivos', 'action' => 'view', $monitoreoTr->cultivos_id1]) : '' ?></td>
                             </td>
                             <td class="actions">
                                 <?= $this->Html->link(__('<i class="fa fa-eye" style="font-size:15px"></i>'), ['action' => 'view', $monitoreoTr->idmonitoreo_TR], ['escape' => false, 'class' => 'btn btn-success', 'title' => 'Ver Monitoreo']) ?>
