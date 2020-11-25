@@ -10,17 +10,39 @@ foreach ($cultivos as $cultivo) :
     $opcion += [$cultivo->id_cultivos => $cultivo->id_cultivos . " " .  $cultivo->nombre];
 endforeach;
 ?>
-<div class="container">
+<div class="container" style="width: 50%;">
     <?= $this->Form->create($insumo, ['class' => 'text-center border border-light p-4']) ?>
     <center>
         <p class="h1 mb-2">Agregar nuevo insumo</p>
         <?php
-        echo $this->Form->control('nombre');
-        echo $this->Form->control('precio_unitario');
-        echo $this->Form->control('precio_total');
-        echo $this->Form->control('cultivos_id', ['options' => $opcion]);
+        echo $this->Form->control('nombre', ['class' => 'form-control']);
+        echo $this->Form->control('precio_unitario', ['class' => 'form-control', 'min' => '1', 'onchange' => 'precio()']);
         ?>
+        <label for="nombre">Cantidad</label>
+        <input type="number" name="cantidad" id="cantidad" class="form-control" min='1' onchange="precio()">
+        <?php
+        echo $this->Form->control('precio_total', ['id' => 'precio_total', 'name' => 'precio_total', 'class' => 'form-control', 'disabled']);
+        echo $this->Form->control('cultivos_id', ['options' => $opcion, 'class' => 'form-control mb-4']);
+        ?>
+
         <?= $this->Form->button('Guardar monitoreo', ['class' => 'btn btn-success']) ?>
         <?= $this->Form->end() ?>
     </center>
 </div>
+
+<script>
+    let valor = document.getElementsById("precio_total");
+    valor.value = 12314;
+
+    function precio() {
+        let precio = document.getElementsById("precio_unitario").value;
+        let cantidad = document.getElementsById("cantidad").value;
+        let total = precio * cantidad;
+        alert(precio);
+        alert(cantidad);
+        if ((precio != 0) && (cantidad != 0)) {
+            let valor = document.getElementsById("precio_total");
+            valor.value = total;
+        }
+    }
+</script>
