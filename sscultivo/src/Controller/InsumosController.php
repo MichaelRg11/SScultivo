@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -63,7 +64,9 @@ class InsumosController extends AppController
             }
             $this->Flash->error(__('The insumo could not be saved. Please, try again.'));
         }
-        $cultivos = $this->Insumos->Cultivos->find('list', ['limit' => 200]);
+        $consulta = "SELECT * FROM cultivos WHERE usuario_id = ";
+        $opciones = array('conditions' => array('cultivos.tipo_cultivo' => "Tierra"));
+        $cultivos = $this->Insumos->Cultivos->query($consulta, $opciones);
         $this->set(compact('insumo', 'cultivos'));
     }
 

@@ -1,31 +1,26 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Insumo $insumo
  */
 session_start();
+$opcion = ['0' => 'Seleccionar cultivo'];
+foreach ($cultivos as $cultivo) :
+    $opcion += [$cultivo->id_cultivos => $cultivo->id_cultivos . " " .  $cultivo->nombre];
+endforeach;
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Insumos'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="insumos form content">
-            <?= $this->Form->create($insumo) ?>
-            <fieldset>
-                <legend><?= __('Add Insumo') ?></legend>
-                <?php
-                    echo $this->Form->control('nombre');
-                    echo $this->Form->control('precio_unitario');
-                    echo $this->Form->control('precio_total');
-                    echo $this->Form->control('cultivos_id', ['options' => $cultivos]);
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
-        </div>
-    </div>
+<div class="container">
+    <?= $this->Form->create($insumo, ['class' => 'text-center border border-light p-4']) ?>
+    <center>
+        <p class="h1 mb-2">Agregar nuevo insumo</p>
+        <?php
+        echo $this->Form->control('nombre');
+        echo $this->Form->control('precio_unitario');
+        echo $this->Form->control('precio_total');
+        echo $this->Form->control('cultivos_id', ['options' => $opcion]);
+        ?>
+        <?= $this->Form->button('Guardar monitoreo', ['class' => 'btn btn-success']) ?>
+        <?= $this->Form->end() ?>
+    </center>
 </div>
