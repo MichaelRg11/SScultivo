@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\MonitoreoAc $monitoreoAc
@@ -18,17 +19,17 @@ session_start();
             <fieldset>
                 <legend><?= __('Add Monitoreo Ac') ?></legend>
                 <?php
-                    echo $this->Form->control('fecha_AC');
-                    echo $this->Form->control('temperatura');
-                    echo $this->Form->control('nitrogeno');
-                    echo $this->Form->control('nitritos');
-                    echo $this->Form->control('oxigeno_disuelto');
-                    echo $this->Form->control('proteina_alimento');
-                    echo $this->Form->control('ph');
-                    echo $this->Form->control('tiempo_crecimiento');
-                    echo $this->Form->control('exposicion_solar');
-                    echo $this->Form->control('comentario');
-                    echo $this->Form->control('cultivos_id2');
+                echo $this->Form->control('fecha_AC');
+                echo $this->Form->control('temperatura');
+                echo $this->Form->control('nitrogeno');
+                echo $this->Form->control('nitritos');
+                echo $this->Form->control('oxigeno_disuelto');
+                echo $this->Form->control('proteina_alimento');
+                echo $this->Form->control('ph');
+                echo $this->Form->control('tiempo_crecimiento');
+                echo $this->Form->control('exposicion_solar');
+                echo $this->Form->control('comentario');
+                echo $this->Form->control('id_cultivos', ['options' => $cultivos]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

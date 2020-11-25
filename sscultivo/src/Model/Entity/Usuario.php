@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model\Entity;
@@ -38,4 +39,9 @@ class Usuario extends Entity
         'contraseña' => true,
         'cultivos' => true,
     ];
+
+    protected function _getFullName()
+    {
+        return $this->id_usuario . ' - ' . $this->apellidos . ' ' . $this->nombre;
+    }
 }

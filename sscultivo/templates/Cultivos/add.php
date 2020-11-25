@@ -7,11 +7,11 @@
 session_start();
 ?>
 <div class="container">
-    <?= $this->Form->create($cultivo, ['class' => 'text-center border border-light p-5']) ?>
+    <?= $this->Form->create($cultivo, ['class' => 'text-center border border-light p-4']) ?>
     <center>
         <div class="reducir">
             <fieldset>
-                <p class="h1 mb-4">Crear cultivo</p>
+                <p class="h1 mb-2">Crear cultivo</p>
                 <?php echo $this->Form->select('Tipo de cultivo', [
                     '0' => 'Seleccionar tipo de cultivo',
                     'Tierra' => 'Cultivo de tierra',

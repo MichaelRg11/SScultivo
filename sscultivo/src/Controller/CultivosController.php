@@ -52,13 +52,13 @@ class CultivosController extends AppController
             $cultivo = $this->Cultivos->patchEntity($cultivo, $this->request->getData());
             if ($this->Cultivos->save($cultivo)) {
                 $this->Flash->success(__('The cultivo has been saved.'));
-
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The cultivo could not be saved. Please, try again.'));
         }
         $usuarios = $this->Cultivos->Usuarios->find('list', ['limit' => 200]);
         $this->set(compact('cultivo', 'usuarios'));
+
     }
 
     /**

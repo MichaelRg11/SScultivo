@@ -56,12 +56,12 @@ class MonitoreoAcController extends AppController
             $monitoreoAc = $this->MonitoreoAc->patchEntity($monitoreoAc, $this->request->getData());
             if ($this->MonitoreoAc->save($monitoreoAc)) {
                 $this->Flash->success(__('The monitoreo ac has been saved.'));
-
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The monitoreo ac could not be saved. Please, try again.'));
         }
-        $this->set(compact('monitoreoAc'));
+        $cultivos = $this->MonitoreoAc->Cultivos->find('list', ['limit' => 200]);
+        $this->set(compact('monitoreoAc', 'cultivos'));
     }
 
     /**

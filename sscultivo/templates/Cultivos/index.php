@@ -21,7 +21,6 @@ session_start();
                         <th scope="col"><?= $this->Paginator->sort('cantidad_pez') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('planta') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('cantidad_planta') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('usuario_id') ?></th>
                         <th class="actions"><?= __('Actions') ?></th>
                     </tr>
                 </thead>
@@ -36,7 +35,6 @@ session_start();
                             <td><?= $this->Number->format($cultivo->cantidad_pez) ?></td>
                             <td><?= h($cultivo->planta) ?></td>
                             <td><?= $this->Number->format($cultivo->cantidad_planta) ?></td>
-                            <td><?= $cultivo->has('usuario') ? $this->Html->link($cultivo->usuario->id_usuario, ['controller' => 'Usuarios', 'action' => 'view', $cultivo->usuario->id_usuario]) : '' ?></td>
                             <td class="actions">
                                 <?= $this->Html->link(__('<i class="fa fa-eye" style="font-size:15px"></i>'), ['action' => 'view', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-success', 'title' => 'Ver Cultivo']) ?>
                                 <?= $this->Html->link(__('<i class="fas fa-pencil-alt" style="font-size:15px"></i>'), ['action' => 'edit', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-info', 'title' => 'Editar Cultivo']) ?>

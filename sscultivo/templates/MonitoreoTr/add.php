@@ -1,36 +1,56 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\MonitoreoTr $monitoreoTr
  */
 session_start();
+$opcion = ['0' => 'Seleccionar cultivo']; 
+foreach ($cultivos as $cultivo) :
+    $opcion +=[$cultivo->id_cultivos => $cultivo->id_cultivos . " " .  $cultivo->nombre];
+endforeach;
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Monitoreo Tr'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="monitoreoTr form content">
-            <?= $this->Form->create($monitoreoTr) ?>
-            <fieldset>
-                <legend><?= __('Add Monitoreo Tr') ?></legend>
-                <?php
-                    echo $this->Form->control('fecha_TR');
-                    echo $this->Form->control('ph');
-                    echo $this->Form->control('humedad');
-                    echo $this->Form->control('nitrogeno');
-                    echo $this->Form->control('fosforo');
-                    echo $this->Form->control('potasio');
-                    echo $this->Form->control('dioxidoCB');
-                    echo $this->Form->control('comentario');
-                    echo $this->Form->control('cultivos_id1');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
-        </div>
-    </div>
+<div class="container">
+    <?= $this->Form->create($monitoreoTr, ['class' => 'text-center border border-light p-4']) ?>
+    <center>
+        <fieldset>
+            <p class="h1 mb-2">Crear monitoreo de tierra</p>
+            <?= $this->Form->control(' ', ['id' => 'fecha_TR', 'name' => 'fecha_TR', 'type' => 'date', 'placeholder' => 'Fecha de creacion del insumo', 'class' => 'form-control']); ?>
+            <div class="form-row">
+                <div class=" col">
+                    <?= $this->Form->control(' ', ['id' => 'ph', 'name' => 'ph', 'placeholder' => 'Cantidad de ph del cultivo', 'class' => 'form-control']); ?>
+                </div>
+                <div class="col">
+                    <?= $this->Form->control(' ', ['type' => 'number', 'humedad' => 'humedad', 'name' => 'cantidad_pez', 'min' => '1', 'placeholder' => 'Porcentaje de humedad del cultivo', 'class' => 'form-control']); ?>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class=" col">
+                    <?= $this->Form->control(' ', ['id' => 'nitrogeno', 'name' => 'nitrogeno', 'placeholder' => 'Cantidad de nitrito del cultivo', 'class' => 'form-control']); ?>
+                </div>
+                <div class="col">
+                    <?= $this->Form->control(' ', ['id' => 'fosforo', 'name' => 'fosforo', 'placeholder' => 'Cantidad de fosforo del cultivo', 'class' => 'form-control']); ?>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class=" col">
+                    <?= $this->Form->control(' ', ['id' => 'potasio', 'name' => 'potasio', 'placeholder' => 'Cantidad de potasio del cultivo', 'class' => 'form-control']); ?>
+                </div>
+                <div class="col">
+                    <?= $this->Form->control(' ', ['id' => 'dioxidoCB', 'name' => 'dioxidoCB', 'placeholder' => 'Cantidad de dioxidoCB del cultivo', 'class' => 'form-control']); ?>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class=" col">
+                    <?= $this->Form->control(' ', ['id' => 'comentario', 'name' => 'comentario', 'placeholder' => 'Comentario con respecto al cultivo', 'class' => 'form-control']); ?>
+                </div>
+                <div class="col">
+                    <?= $this->Form->control(' ', ['options' =>  $opcion, 'id' => 'id_cultivos', 'name' => 'id_cultivos', 'placeholder' => 'Cantidad de dioxidoCB del cultivo', 'class' => 'form-control']); ?>
+                </div>
+            </div>
+        </fieldset>
+    </center>
+    <br>
+    <?= $this->Form->button('Guardar monitoreo', ['class' => 'btn btn-success']) ?>
+    <?= $this->Form->end() ?>
 </div>

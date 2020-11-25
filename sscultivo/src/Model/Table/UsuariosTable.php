@@ -40,7 +40,7 @@ class UsuariosTable extends Table
         parent::initialize($config);
 
         $this->setTable('usuarios');
-        $this->setDisplayField('id_usuario');
+        $this->setDisplayField('FullName');
         $this->setPrimaryKey('id_usuario');
 
         $this->hasMany('Cultivos', [
