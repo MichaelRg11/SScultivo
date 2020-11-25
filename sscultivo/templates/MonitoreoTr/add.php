@@ -17,7 +17,14 @@ endforeach;
     <center>
         <fieldset>
             <p class="h1 mb-2">Crear monitoreo de tierra</p>
-            <?= $this->Form->control(' ', ['id' => 'fecha_TR', 'name' => 'fecha_TR', 'type' => 'date', 'placeholder' => 'Fecha de creacion del insumo', 'class' => 'form-control']); ?>
+            <div class="form-row">
+                <div class="col">
+                    <?= $this->Form->control(' ', ['options' =>  $opcion, 'id' => 'cultivos_id1', 'name' => 'cultivos_id1', 'placeholder' => 'Cantidad de dioxidoCB del cultivo', 'class' => 'form-control']); ?>
+                </div>
+                <div class=" col">
+                    <?= $this->Form->control(' ', ['id' => 'fecha_TR', 'name' => 'fecha_TR', 'type' => 'date', 'placeholder' => 'Fecha de creacion del insumo', 'class' => 'form-control']); ?>
+                </div>
+            </div>
             <div class="form-row">
                 <div class=" col">
                     <?= $this->Form->control(' ', ['id' => 'ph', 'name' => 'ph', 'placeholder' => 'Cantidad de ph del cultivo', 'class' => 'form-control']); ?>
@@ -42,14 +49,7 @@ endforeach;
                     <?= $this->Form->control(' ', ['id' => 'dioxidoCB', 'name' => 'dioxidoCB', 'placeholder' => 'Cantidad de dioxidoCB del cultivo', 'class' => 'form-control']); ?>
                 </div>
             </div>
-            <div class="form-row">
-                <div class=" col">
-                    <?= $this->Form->control(' ', ['id' => 'comentario', 'name' => 'comentario', 'placeholder' => 'Comentario con respecto al cultivo', 'class' => 'form-control']); ?>
-                </div>
-                <div class="col">
-                    <?= $this->Form->control(' ', ['options' =>  $opcion, 'id' => 'cultivos_id1', 'name' => 'cultivos_id1', 'placeholder' => 'Cantidad de dioxidoCB del cultivo', 'class' => 'form-control']); ?>
-                </div>
-            </div>
+            <?= $this->Form->control(' ', ['id' => 'comentario', 'name' => 'comentario', 'placeholder' => 'Comentario con respecto al cultivo', 'class' => 'form-control']); ?>
         </fieldset>
     </center>
     <br>
