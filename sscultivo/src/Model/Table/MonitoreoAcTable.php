@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model\Table;
@@ -40,6 +41,11 @@ class MonitoreoAcTable extends Table
         $this->setTable('monitoreo_ac');
         $this->setDisplayField('idmonitoreo_AC');
         $this->setPrimaryKey('idmonitoreo_AC');
+
+        $this->belongsTo('Cultivos', [
+            'foreignKey' => 'cultivos_id2',
+            'joinType' => 'INNER',
+        ]);
     }
 
     /**
@@ -119,5 +125,12 @@ class MonitoreoAcTable extends Table
             ->notEmptyString('cultivos_id2');
 
         return $validator;
+    }
+
+    public function buildRules(RulesChecker $rules): RulesChecker
+    {
+        $rules->add($rules->existsIn(['cultivos_id2'], 'Cultivos'), ['errorField' => 'cultivos_id2']);
+
+        return $rules;
     }
 }

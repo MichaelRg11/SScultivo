@@ -22,7 +22,6 @@ class CultivosController extends AppController
             'contain' => ['Usuarios'],
         ];
         $cultivos = $this->paginate($this->Cultivos);
-
         $this->set(compact('cultivos'));
     }
 
@@ -38,7 +37,6 @@ class CultivosController extends AppController
         $cultivo = $this->Cultivos->get($id, [
             'contain' => ['Usuarios'],
         ]);
-
         $this->set(compact('cultivo'));
     }
 
@@ -104,7 +102,6 @@ class CultivosController extends AppController
         } else {
             $this->Flash->error(__('The cultivo could not be deleted. Please, try again.'));
         }
-
         return $this->redirect(['action' => 'index']);
     }
 }

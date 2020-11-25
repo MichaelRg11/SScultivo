@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Model\Table;
@@ -40,6 +41,11 @@ class MonitoreoTrTable extends Table
         $this->setTable('monitoreo_tr');
         $this->setDisplayField('idmonitoreo_TR');
         $this->setPrimaryKey('idmonitoreo_TR');
+
+        $this->belongsTo('Cultivos', [
+            'foreignKey' => 'cultivos_id1',
+            'joinType' => 'INNER',
+        ]);
     }
 
     /**
@@ -106,5 +112,19 @@ class MonitoreoTrTable extends Table
             ->notEmptyString('cultivos_id1');
 
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules): RulesChecker
+    {
+        $rules->add($rules->existsIn(['cultivos_id1'], 'Cultivos'), ['errorField' => 'cultivos_id1']);
+
+        return $rules;
     }
 }

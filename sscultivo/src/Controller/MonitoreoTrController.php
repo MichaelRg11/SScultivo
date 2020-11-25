@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -18,6 +19,10 @@ class MonitoreoTrController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['Cultivos'],
+        ];
+
         $monitoreoTr = $this->paginate($this->MonitoreoTr);
 
         $this->set(compact('monitoreoTr'));
