@@ -5,9 +5,11 @@
  * @var \App\Model\Entity\MonitoreoTr $monitoreoTr
  */
 session_start();
-$opcion = ['0' => 'Seleccionar cultivo']; 
+$opcion = ['0' => 'Seleccionar cultivo'];
 foreach ($cultivos as $cultivo) :
-    $opcion +=[$cultivo->id_cultivos => $cultivo->id_cultivos . " " .  $cultivo->nombre];
+    if ($cultivo->tipo_cultivo == 'Tierra') {
+        $opcion += [$cultivo->id_cultivos => $cultivo->id_cultivos . " " .  $cultivo->nombre];
+    }
 endforeach;
 ?>
 <div class="container">
@@ -21,7 +23,7 @@ endforeach;
                     <?= $this->Form->control(' ', ['id' => 'ph', 'name' => 'ph', 'placeholder' => 'Cantidad de ph del cultivo', 'class' => 'form-control']); ?>
                 </div>
                 <div class="col">
-                    <?= $this->Form->control(' ', ['type' => 'number', 'humedad' => 'humedad', 'name' => 'cantidad_pez', 'min' => '1', 'placeholder' => 'Porcentaje de humedad del cultivo', 'class' => 'form-control']); ?>
+                    <?= $this->Form->control(' ', ['type' => 'number', 'id' => 'humedad', 'name' => 'cantidad_pez', 'min' => '1', 'placeholder' => 'Porcentaje de humedad del cultivo', 'class' => 'form-control']); ?>
                 </div>
             </div>
             <div class="form-row">
@@ -45,7 +47,7 @@ endforeach;
                     <?= $this->Form->control(' ', ['id' => 'comentario', 'name' => 'comentario', 'placeholder' => 'Comentario con respecto al cultivo', 'class' => 'form-control']); ?>
                 </div>
                 <div class="col">
-                    <?= $this->Form->control(' ', ['options' =>  $opcion, 'id' => 'id_cultivos', 'name' => 'id_cultivos', 'placeholder' => 'Cantidad de dioxidoCB del cultivo', 'class' => 'form-control']); ?>
+                    <?= $this->Form->control(' ', ['options' =>  $opcion, 'id' => 'cultivos_id1', 'name' => 'cultivos_id1', 'placeholder' => 'Cantidad de dioxidoCB del cultivo', 'class' => 'form-control']); ?>
                 </div>
             </div>
         </fieldset>

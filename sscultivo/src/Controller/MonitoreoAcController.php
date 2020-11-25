@@ -60,7 +60,9 @@ class MonitoreoAcController extends AppController
             }
             $this->Flash->error(__('The monitoreo ac could not be saved. Please, try again.'));
         }
-        $cultivos = $this->MonitoreoAc->Cultivos->find('list', ['limit' => 200]);
+        $consulta = "SELECT * FROM cultivos WHERE usuario_id = ";
+        $opciones = array('conditions' => array('cultivos.tipo_cultivo' => "Tierra"));
+        $cultivos = $this->MonitoreoAc->Cultivos->query($consulta, $opciones);
         $this->set(compact('monitoreoAc', 'cultivos'));
     }
 
