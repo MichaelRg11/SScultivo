@@ -19,13 +19,11 @@ class MonitoreoAcController extends AppController
      */
     public function index()
     {
-        session_start();
         $this->paginate = [
             'contain' => ['Cultivos'],
         ];
-        $opciones = array('conditions' => array('Cultivos.usuario_id' => $_SESSION['id']));
-        $monitoreoAcs = $this->paginate($this->MonitoreoAc->find('All', $opciones));
-        $monitoreoAc = $this->paginate($this->MonitoreoAc->find('All', $opciones));
+
+        $monitoreoAc = $this->paginate($this->MonitoreoAc);
 
         $this->set(compact('monitoreoAc'));
     }

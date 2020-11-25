@@ -112,7 +112,7 @@
                                     <?php echo $_SESSION['nombre']; ?>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarsession">
-                                    <?php echo $this->Html->link('<i class="fa fa-eye" style="font-size:15px"> Informacion</i>', ['controller' => 'Usuarios', 'action' => 'logout'], ['escape' => false, 'class' => 'text-muted']); ?>
+
                                     <?php echo $this->Html->link('<i class="fas fa-sign-out-alt" style="font-size: 15px"> Salir</i>', ['controller' => 'Usuarios', 'action' => 'logout'], ['escape' => false, 'class' => 'text-muted']); ?>
                                 </div>
                             </li>

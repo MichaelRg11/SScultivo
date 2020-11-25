@@ -19,14 +19,11 @@ class MonitoreoTrController extends AppController
      */
     public function index()
     {
-        session_start();;
         $this->paginate = [
             'contain' => ['Cultivos'],
         ];
 
-        $opciones = array('conditions' => array('Cultivos.usuario_id' => $_SESSION['id']));
-
-        $monitoreoTr = $this->paginate($this->MonitoreoTr->find('All', $opciones));
+        $monitoreoTr = $this->paginate($this->MonitoreoTr);
 
         $this->set(compact('monitoreoTr'));
     }
