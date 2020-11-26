@@ -128,7 +128,7 @@ class ReportesController extends AppController
   }
 
   //--- Reporte de cultivos entre 2 fechas ---
-  public function cultivofechas($fecha1 = null, $fecha2 = null)
+  public function cultivofechas($id = null, $fecha01 = null, $fecha02 = null)
   {
     require  ROOT . DS . 'vendor' . DS . 'tcpdf' . DS . 'Pdf.php';
 
@@ -145,10 +145,9 @@ class ReportesController extends AppController
     // add a page
     $pdf->AddPage('L', 'LETTER');
     $pdf->SetFont('times', '', 12, '', true);
-
-    $id_usuario = 1;
-    $fecha1 = '2020-10-23';
-    $fecha2 = '2020-11-30';
+    $id_usuario = $id;
+    $fecha1 = $fecha01;
+    $fecha2 = $fecha02;
 
     $condit = array('conditions' => array('Cultivos.usuario_id' => $id_usuario, 'Cultivos.fecha >=' => $fecha1, 'Cultivos.fecha <=' => $fecha2));
     $cultivoUsuario =  TableRegistry::getTableLocator()->get('Cultivos')->find('all', $condit)->toArray();
