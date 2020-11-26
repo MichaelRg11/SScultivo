@@ -26,23 +26,23 @@ endforeach;
             </div>
             <div class="form-row">
                 <div class=" col">
-                    <?= $this->Form->control(' ', ['id' => 'temperatura', 'name' => 'temperatura', 'placeholder' => 'Temperatura del cultivo', 'class' => 'form-control']); ?>
+                    <?= $this->Form->control(' ', ['id' => 'temperatura', 'name' => 'temperatura', 'placeholder' => 'Temperatura del cultivo: En ºC', 'class' => 'form-control']); ?>
                 </div>
                 <div class="col">
-                    <?= $this->Form->control(' ', ['id' => 'nitrogeno', 'name' => 'nitrogeno', 'placeholder' => 'Cantidad de nitrogeno del cultivo', 'class' => 'form-control']); ?>
+                    <?= $this->Form->control(' ', ['id' => 'nitrogeno', 'name' => 'nitrogeno', 'placeholder' => 'Cantidad de nitrogeno del cultivo: En mg/l', 'class' => 'form-control']); ?>
                 </div>
             </div>
             <div class="form-row">
                 <div class=" col">
-                    <?= $this->Form->control(' ', ['id' => 'nitritos', 'name' => 'nitritos', 'placeholder' => 'Cantidad de nitritos del cultivo', 'class' => 'form-control']); ?>
+                    <?= $this->Form->control(' ', ['id' => 'nitritos', 'name' => 'nitritos', 'placeholder' => 'Cantidad de nitritos del cultivo: En mg/l', 'class' => 'form-control']); ?>
                 </div>
                 <div class="col">
-                    <?= $this->Form->control(' ', ['id' => 'oxigeno_disuelto', 'name' => 'oxigeno_disuelto', 'placeholder' => 'Cantidad de oxigeno disuelto del cultivo', 'class' => 'form-control']); ?>
+                    <?= $this->Form->control(' ', ['id' => 'oxigeno_disuelto', 'name' => 'oxigeno_disuelto', 'placeholder' => 'Cantidad de oxigeno disuelto del cultivo: En mg/l', 'class' => 'form-control']); ?>
                 </div>
             </div>
             <div class="form-row">
                 <div class=" col">
-                    <?= $this->Form->control(' ', ['id' => 'proteina_alimento', 'name' => 'proteina_alimento', 'placeholder' => 'Cantidad de proteina alimento del cultivo', 'class' => 'form-control']); ?>
+                    <?= $this->Form->control(' ', ['id' => 'proteina_alimento', 'name' => 'proteina_alimento', 'placeholder' => 'Cantidad de proteina alimento del cultivo: En Porcentaje', 'class' => 'form-control']); ?>
                 </div>
                 <div class="col">
                     <?= $this->Form->control(' ', ['id' => 'ph', 'name' => 'ph', 'placeholder' => 'Cantidad de ph del cultivo', 'class' => 'form-control']); ?>
@@ -50,10 +50,10 @@ endforeach;
             </div>
             <div class="form-row">
                 <div class=" col">
-                    <?= $this->Form->control(' ', ['id' => 'tiempo_crecimiento', 'name' => 'tiempo_crecimiento', 'placeholder' => 'Cantidad de tiempo crecimiento del cultivo', 'class' => 'form-control']); ?>
+                    <?= $this->Form->control(' ', ['id' => 'tiempo_crecimiento', 'name' => 'tiempo_crecimiento', 'placeholder' => 'Tiempo de crecimiento: Se mide en semanas', 'class' => 'form-control']); ?>
                 </div>
                 <div class="col">
-                    <?= $this->Form->control(' ', ['id' => 'exposicion_solar', 'name' => 'exposicion_solar', 'placeholder' => 'Cantidad de exposicion solar del cultivo', 'class' => 'form-control']); ?>
+                    <?= $this->Form->control(' ', ['id' => 'exposicion_solar', 'name' => 'exposicion_solar', 'onkeypress' => 'return soloLetras(event)' , 'placeholder' => 'Exposicion solar: Alta, Media, Baja', 'class' => 'form-control']); ?>
                 </div>
             </div>
             <?= $this->Form->control(' ', ['id' => 'comentario', 'name' => 'comentario', 'placeholder' => 'Comentarios respecto al cultivo', 'class' => 'form-control']); ?>
@@ -63,3 +63,23 @@ endforeach;
     <?= $this->Form->button('Guardar monitoreo', ['class' => 'btn btn-success']) ?>
     <?= $this->Form->end() ?>
 </div>
+
+<script>
+    function soloLetras(e) {
+        var key = e.keyCode || e.which,
+            tecla = String.fromCharCode(key).toLowerCase(),
+            letras = " áéíóúabcdefghijklmnñopqrstuvwxyz",
+            especiales = [8, 37, 39, 46],
+            tecla_especial = false;
+
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
+        if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+            return false;
+        }
+    }
+</script>

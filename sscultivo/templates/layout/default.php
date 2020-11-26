@@ -166,15 +166,12 @@
                     <!--footer_ul2_amrc ends here-->
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                    <h5 class="headin5_amrc col_white_amrc pt2">Enlace rapido</h5>
                     <!--headin5_amrc-->
                     <ul class="footer_ul_amrc">
-                        <li><a href="#">Default Version</a></li>
-                        <li><a href="#">Boxed Version</a></li>
-                        <li><a href="#">Our Team </a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Services</a></li>
-                        <li><a href="#">Get In Touch</a></li>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Nuestros servicios</a></li>
+                        <li><a href="#">Ponerse en contacto</a></li>
                     </ul>
                     <!--footer_ul_amrc ends here-->
                 </div>

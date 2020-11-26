@@ -28,23 +28,23 @@ endforeach;
                 <?= $this->Form->control(' ', ['id' => 'ph', 'name' => 'ph', 'placeholder' => 'Cantidad de ph del cultivo', 'class' => 'form-control']); ?>
             </div>
             <div class="col">
-                <?= $this->Form->control(' ', ['type' => 'number', 'id' => 'humedad', 'name' => 'humedad', 'min' => '1', 'placeholder' => 'Porcentaje de humedad del cultivo', 'class' => 'form-control']); ?>
+                <?= $this->Form->control(' ', ['type' => 'number', 'id' => 'humedad', 'name' => 'humedad', 'min' => '1', 'placeholder' => 'Humedad del cultivo: En porcentaje', 'class' => 'form-control']); ?>
             </div>
         </div>
         <div class="form-row">
             <div class=" col">
-                <?= $this->Form->control(' ', ['id' => 'nitrogeno', 'name' => 'nitrogeno', 'placeholder' => 'Cantidad de nitrito del cultivo', 'class' => 'form-control']); ?>
+                <?= $this->Form->control(' ', ['id' => 'nitrogeno', 'name' => 'nitrogeno', 'placeholder' => 'Cantidad de nitrito del cultivo: En lb/acre', 'class' => 'form-control']); ?>
             </div>
             <div class="col">
-                <?= $this->Form->control(' ', ['id' => 'fosforo', 'name' => 'fosforo', 'placeholder' => 'Cantidad de fosforo del cultivo', 'class' => 'form-control']); ?>
+                <?= $this->Form->control(' ', ['id' => 'fosforo', 'name' => 'fosforo', 'placeholder' => 'Cantidad de fosforo del cultivo: En lb/acre', 'class' => 'form-control']); ?>
             </div>
         </div>
         <div class="form-row">
             <div class=" col">
-                <?= $this->Form->control(' ', ['id' => 'potasio', 'name' => 'potasio', 'placeholder' => 'Cantidad de potasio del cultivo', 'class' => 'form-control']); ?>
+                <?= $this->Form->control(' ', ['id' => 'potasio', 'name' => 'potasio', 'placeholder' => 'Cantidad de potasio del cultivo: En lb/acre', 'class' => 'form-control']); ?>
             </div>
             <div class="col">
-                <?= $this->Form->control(' ', ['id' => 'dioxidoCB', 'name' => 'dioxidoCB', 'placeholder' => 'Cantidad de dioxidoCB del cultivo', 'class' => 'form-control']); ?>
+                <?= $this->Form->control(' ', ['id' => 'dioxidoCB', 'name' => 'dioxidoCB', 'placeholder' => 'Cantidad de dioxidoCB del cultivo: En ppm', 'class' => 'form-control']); ?>
             </div>
         </div>
         <?= $this->Form->control(' ', ['id' => 'comentario', 'name' => 'comentario', 'placeholder' => 'Comentario con respecto al cultivo', 'class' => 'form-control']); ?>

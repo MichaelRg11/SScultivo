@@ -83,7 +83,7 @@
       </div>
       <!-- Our Customers -->
       <div class="customers-box">
-         <h2>Our Customers</h2>
+         <h2>Nuestros clientes</h2>
          <div class="row">
             <div class="col-lg-2 col-sm-4 mb-4">
                <img class="img-fluid" src="../img/logo_01.png" alt="" />
