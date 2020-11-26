@@ -9,29 +9,23 @@
     <center>
         <div class="container">
             <p class="h1 mb-4">Lista de cultivos</p>
+            
+            <?= $this->Form->create() ?>
             <div class="form-row mb-4" id="datos">
                 <div class="col">
-                    <input type="date" id="fecha1" class="form-control" onchange="">
+                    <input type="date" id="fecha1" name="fecha1" class="form-control" onchange="">
                 </div>
                 <div class="col">
-                    <input type="date" id="fecha2" class="form-control" onchange="enviar();">
+                    <input type="date" id="fecha2" name="fecha2" class="form-control" onchange="">
                 </div>
                 <div class="col">
-                    <?= $this->Form->button('Guardar cultivo', ['id' => 'btn', 'class' => 'btn btn-success', 'onchange', ';']) ?>
+                    <?= $this->Form->button('Generar PDF entre fechas', ['id' => 'btn', 'class' => 'btn btn-success', 'onchange', 'enviar();']) ?>
+                </div>
+                <?= $this->Form->end() ?>
+                <div class="col">
+                <?= $this->Html->link(__('<i class="fas fa-plus" style="font-size:15px"> Agregar nuevo cultivo</i>'), ['action' => 'add'], ['escape' => false, 'class' => 'btn btn-primary']) ?>
                 </div>
             </div>
-
-            <script>
-                function enviar() {
-                    let fecha1 = document.getElementById("fecha1").value;
-                    let fecha2 = document.getElementById("fecha2").value;
-                    if ((fecha1 != null || fecha1 != 0) && (fecha2 != null || fecha2 != 0)) {
-                        return false;
-                    }
-                }
-            </script>
-
-            <?= $this->Html->link(__('Nuevo cultivo'), ['action' => 'add'], ['class' => 'btn btn-primary offset-md-8 mb-2']) ?>
         </div>
         <div class="table-responsive">
             <table class="table">

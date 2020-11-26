@@ -27,6 +27,11 @@ class CultivosController extends AppController
         $opciones = array('conditions' => array('Cultivos.usuario_id' => $_SESSION['id']));
         $cultivos = $this->paginate($this->Cultivos->find('All', $opciones));
         $this->set(compact('cultivos'));
+        if ($this->request->is('post')) {
+            if (($_POST['fecha1'] != null) && ($_POST['fecha2'] != null)) {
+                return $this->redirect(['controller' => 'Reportes', 'action' => 'cultivofechas', $_SESSION['id'],  $_POST['fecha1'], $_POST['fecha2']]);
+            }
+        }
     }
 
     /**

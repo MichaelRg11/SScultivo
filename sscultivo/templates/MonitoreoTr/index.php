@@ -9,7 +9,7 @@
     <br>
     <center>
         <p class="h1 mb-2">Lista de monitoreo TR</p>
-        <?= $this->Html->link(__('Nuevo monitoreo TR'), ['action' => 'add'], ['class' => 'btn btn-primary offset-md-8 h1 mb-2']) ?>
+        <?= $this->Html->link(__('<i class="fas fa-plus" style="font-size:15px"> Agragar nuevo insumo terrestre</i>'), ['action' => 'add'], ['escape' => false, 'class' => 'btn btn-primary offset-md-8 h1 mb-2']) ?>
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
