@@ -37,10 +37,20 @@ class ReportesController extends AppController
     $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
     $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
     // add a page
+
     $pdf->AddPage('P', 'LETTER');
     $pdf->SetFont('times', '', 12, '', true);
+    $style3 = array('width' => 1, 'cap' => 'round', 'join' => 'round', 'dash' => '2,10', 'color' => array(255, 0, 0));
+    $style4 = array('L' => 0,
+                'T' => array('width' => 0, 'cap' => 'butt', 'join' => 'miter', 'dash' => '', 'phase' => 10, 'color' => array(0, 0, 0)),
+                'R' => array('width' => 0, 'cap' => 'round', 'join' => 'miter', 'dash' => '', 'color' => array(0, 0, 0)),
+                'B' => array('width' => 0, 'cap' => 'square', 'join' => 'miter', 'dash' => ''));
 
-    $xc = 105;
+    $pdf->Text(100, 150, 'Rectangle examples');
+    $pdf->Rect(20, 50, 20, 100, 'DF', $style4, array(193, 66, 66));
+    $pdf->Rect(145, 10, 40, 20, 'D', array('all' => $style3));
+
+   /* $xc = 105;
     $yc = 100;
     $r = 50;
 
@@ -51,7 +61,7 @@ class ReportesController extends AppController
     $pdf->PieSector($xc, $yc, $r, 120, 250, 'FD', false, 0, 2);
 
     $pdf->SetFillColor(255, 0, 0);
-    $pdf->PieSector($xc, $yc, $r, 250, 20, 'FD', false, 0, 2);
+    $pdf->PieSector($xc, $yc, $r, 250, 20, 'FD', false, 0, 2);*/
 
     // write labels
     $pdf->SetTextColor(255, 255, 255);

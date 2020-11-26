@@ -156,15 +156,6 @@ endforeach;
             }
         });
 
-    function generarNumero(numero){
-	    return (Math.random()*numero).toFixed(0);
-    }
-
-    function colorRGB(){
-        var coolor = "("+generarNumero(255)+"," + generarNumero(255) + "," + generarNumero(255) +")";
-        return "rgb" + coolor;
-    }
-
     function verde(){
         return "rgb(13, 190, 48)";
     }

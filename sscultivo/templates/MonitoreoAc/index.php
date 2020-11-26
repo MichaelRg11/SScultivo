@@ -11,6 +11,7 @@
         <p class="h1 mb-2">Lista de monitoreo AC</p>
         <?= $this->Html->link(__('Nuevo monitoreo AC'), ['action' => 'add'], ['class' => 'btn btn-primary offset-md-8 h1 mb-2']) ?>
         <br>
+        <a> <?= $this->Html->link(__('Ejemplo Grafica'), ['controller' => 'Reportes', 'action' => 'ejemplo'], ['class' => 'dropdown-item']) ?></a>
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
