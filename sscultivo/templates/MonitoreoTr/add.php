@@ -4,7 +4,6 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\MonitoreoTr $monitoreoTr
  */
-session_start();
 $opcion = ['0' => 'Seleccionar cultivo'];
 foreach ($cultivos as $cultivo) :
     if ($cultivo->tipo_cultivo == 'Tierra') {

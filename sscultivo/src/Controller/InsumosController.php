@@ -54,6 +54,7 @@ class InsumosController extends AppController
      */
     public function add()
     {
+        session_start();
         $insumo = $this->Insumos->newEmptyEntity();
         if ($this->request->is('post')) {
             $insumo = $this->Insumos->patchEntity($insumo, $this->request->getData());
@@ -64,9 +65,8 @@ class InsumosController extends AppController
             }
             $this->Flash->error(__('The insumo could not be saved. Please, try again.'));
         }
-        $consulta = "SELECT * FROM cultivos WHERE usuario_id = ";
-        $opciones = array('conditions' => array('cultivos.tipo_cultivo' => "Tierra"));
-        $cultivos = $this->Insumos->Cultivos->query($consulta, $opciones);
+        $opciones = array('conditions' => array('Cultivos.usuario_id' => $_SESSION['id']));
+        $cultivos = $this->Insumos->Cultivos->find('All', $opciones);
         $this->set(compact('insumo', 'cultivos'));
     }
 
