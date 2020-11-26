@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -18,10 +19,14 @@ class InsumosController extends AppController
      */
     public function index()
     {
+        session_start();
         $this->paginate = [
             'contain' => ['Cultivos'],
         ];
-        $insumos = $this->paginate($this->Insumos);
+
+        $opciones = array('conditions' => array('Cultivos.usuario_id' => $_SESSION['id']));
+
+        $insumos = $this->paginate($this->Insumos->find('All', $opciones));
 
         $this->set(compact('insumos'));
     }
@@ -38,7 +43,6 @@ class InsumosController extends AppController
         $insumo = $this->Insumos->get($id, [
             'contain' => ['Cultivos'],
         ]);
-
         $this->set(compact('insumo'));
     }
 
@@ -49,6 +53,7 @@ class InsumosController extends AppController
      */
     public function add()
     {
+        session_start();
         $insumo = $this->Insumos->newEmptyEntity();
         if ($this->request->is('post')) {
             $insumo = $this->Insumos->patchEntity($insumo, $this->request->getData());
@@ -59,7 +64,8 @@ class InsumosController extends AppController
             }
             $this->Flash->error(__('The insumo could not be saved. Please, try again.'));
         }
-        $cultivos = $this->Insumos->Cultivos->find('list', ['limit' => 200]);
+        $opciones = array('conditions' => array('Cultivos.usuario_id' => $_SESSION['id']));
+        $cultivos = $this->Insumos->Cultivos->find('All', $opciones);
         $this->set(compact('insumo', 'cultivos'));
     }
 
@@ -72,6 +78,7 @@ class InsumosController extends AppController
      */
     public function edit($id = null)
     {
+        session_start();
         $insumo = $this->Insumos->get($id, [
             'contain' => [],
         ]);
@@ -84,7 +91,8 @@ class InsumosController extends AppController
             }
             $this->Flash->error(__('The insumo could not be saved. Please, try again.'));
         }
-        $cultivos = $this->Insumos->Cultivos->find('list', ['limit' => 200]);
+        $opciones = array('conditions' => array('Cultivos.usuario_id' => $_SESSION['id']));
+        $cultivos = $this->Insumos->Cultivos->find('All', $opciones);
         $this->set(compact('insumo', 'cultivos'));
     }
 

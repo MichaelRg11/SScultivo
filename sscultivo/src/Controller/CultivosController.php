@@ -1,7 +1,9 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
+
 
 /**
  * Cultivos Controller
@@ -18,10 +20,12 @@ class CultivosController extends AppController
      */
     public function index()
     {
+        session_start();
         $this->paginate = [
             'contain' => ['Usuarios'],
         ];
-        $cultivos = $this->paginate($this->Cultivos);
+        $opciones = array('conditions' => array('Cultivos.usuario_id' => $_SESSION['id']));
+        $cultivos = $this->paginate($this->Cultivos->find('All', $opciones));
         $this->set(compact('cultivos'));
     }
 
@@ -58,7 +62,6 @@ class CultivosController extends AppController
         }
         $usuarios = $this->Cultivos->Usuarios->find('list', ['limit' => 200]);
         $this->set(compact('cultivo', 'usuarios'));
-
     }
 
     /**

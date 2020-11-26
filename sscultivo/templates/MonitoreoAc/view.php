@@ -4,7 +4,14 @@
  * @var \App\Model\Entity\MonitoreoAc $monitoreoAc
  */
 session_start();
+foreach ($cultivos as $cultivo) :
+    $planta = $cultivo->planta;
+    $peces = $cultivo->peces;
+endforeach;
 ?>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css">
+
 <div class="row">
     <aside class="column">
         <div class="side-nav">
@@ -71,3 +78,163 @@ session_start();
         </div>
     </div>
 </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <canvas id="peces" width="50" height="50"></canvas>
+        </div>
+        <div class="col-lg-6">
+            <canvas id="plantas" width="50" height="50"></canvas>
+        </div>
+    </div>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+    <script>
+        var ctx = document.getElementById('peces');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Temperatura', 'Nitrogeno', 'Nitritos', 'Oxigeno Disuelto', 'Proteina Alimento'],
+                datasets: [{
+                    label: 'grafica de peces',
+                    data: [<?= h($monitoreoAc->temperatura) ?>, <?= h($monitoreoAc->nitrogeno) ?>, <?= h($monitoreoAc->nitritos) ?>, <?= h($monitoreoAc->oxigeno_disuelto) ?>,
+                    <?= h($monitoreoAc->proteina_alimento) ?>],
+                    backgroundColor:[colorDinamicoTemperatura(),colorDinamicoNitrogeno(),colorDinamicoNitritos(),
+                    colorDinamicoOD(),colorDinamicopPA()
+                    ],
+                    borderColor: [
+                        'rgba(29, 185, 18, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var ctx = document.getElementById('plantas');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Ph','Tiempo Crecimiento'],
+                datasets: [{
+                    label: 'grafica de plantas',
+                    data: [<?= h($monitoreoAc->ph) ?>, <?= h($monitoreoAc->tiempo_crecimiento) ?>],
+                    backgroundColor:[colorDinamicopPH(),colorDinamicopTC()
+                    ],
+                    borderColor: [
+                        'rgba(29, 185, 18, 1)',
+                        'rgba(54, 162, 235, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+    function generarNumero(numero){
+	    return (Math.random()*numero).toFixed(0);
+    }
+
+    function colorRGB(){
+        var coolor = "("+generarNumero(255)+"," + generarNumero(255) + "," + generarNumero(255) +")";
+        return "rgb" + coolor;
+    }
+
+    function verde(){
+        return "rgb(13, 190, 48)";
+    }
+
+    function rojo(){
+        return "rgb(232, 12, 12)";
+    }
+
+    function colorDinamicoTemperatura(){
+                if(<?=h($monitoreoAc->temperatura) ?>>=15 && <?=h($monitoreoAc->temperatura) ?><=22){
+                    var color = verde(); 
+                }else{
+                   var color = rojo();
+                }     
+                return color;        
+    }
+
+    function colorDinamicoNitrogeno(){
+                if(<?= h($monitoreoAc->nitrogeno) ?>>=15 && <?= h($monitoreoAc->nitrogeno) ?><=22){
+                    var color = verde(); 
+                }else{
+                   var color = rojo();
+                }     
+                return color;        
+    }
+
+    function colorDinamicoNitritos(){
+                if(<?= h($monitoreoAc->nitritos) ?>>=15 && <?= h($monitoreoAc->nitritos) ?><=22){
+                    var color = verde(); 
+                }else{
+                   var color = rojo();
+                }     
+                return color;        
+    }
+
+    function colorDinamicoOD(){
+                if(<?= h($monitoreoAc->oxigeno_disuelto) ?>>=15 && <?= h($monitoreoAc->oxigeno_disuelto) ?><=22){
+                    var color = verde(); 
+                }else{
+                   var color = rojo();
+                }     
+                return color;        
+    }
+
+    function colorDinamicopPA(){
+                if(<?= h($monitoreoAc->proteina_alimento) ?>>=15 && <?= h($monitoreoAc->proteina_alimento) ?><=22){
+                    var color = verde(); 
+                }else{
+                   var color = rojo();
+                }     
+                return color;        
+    }
+
+    function colorDinamicopPH(){
+                if(<?= h($monitoreoAc->ph) ?> >=5 && <?= h($monitoreoAc->ph) ?><=7){
+                    var color = verde(); 
+                }else{
+                   var color = rojo();
+                }     
+                return color;        
+    }
+
+    function colorDinamicopTC(){
+                if(<?= h($monitoreoAc->tiempo_crecimiento) ?>>=15 && <?= h($monitoreoAc->tiempo_crecimiento) ?><=22){
+                    var color = verde(); 
+                }else{
+                   var color = rojo();
+                }     
+                return color;        
+    }
+
+
+</script>
