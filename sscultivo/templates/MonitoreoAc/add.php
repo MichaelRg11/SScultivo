@@ -9,6 +9,7 @@ foreach ($cultivos as $cultivo) :
     if ($cultivo->tipo_cultivo == 'Acuaponico') {
         $opcion += [$cultivo->id_cultivos => $cultivo->id_cultivos . " " .  $cultivo->nombre];
     }
+    
 endforeach;
 ?>
 <div class="container">

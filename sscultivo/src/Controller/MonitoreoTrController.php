@@ -65,10 +65,10 @@ class MonitoreoTrController extends AppController
             }
             $this->Flash->error(__('The monitoreo tr could not be saved. Please, try again.'));
         }
-        $consulta = "SELECT * FROM cultivos WHERE usuario_id = ";
         $opciones = array('conditions' => array('cultivos.tipo_cultivo' => "Tierra", 'Cultivos.usuario_id' => $_SESSION['id']));
-        $cultivos = $this->MonitoreoTr->Cultivos->query($consulta, $opciones);
+        $cultivos = $this->MonitoreoTr->Cultivos->find('All', $opciones);
         $this->set(compact('monitoreoTr', 'cultivos'));
+
     }
 
     /**
