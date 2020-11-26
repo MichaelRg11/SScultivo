@@ -4,6 +4,10 @@
  * @var \App\Model\Entity\MonitoreoAc $monitoreoAc
  */
 session_start();
+foreach ($cultivos as $cultivo) :
+    $planta = $cultivo->planta;
+    $peces = $cultivo->peces;
+endforeach;
 ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css">
@@ -215,7 +219,7 @@ session_start();
     }
 
     function colorDinamicopPH(){
-                if(<?= h($monitoreoAc->ph) ?>>=15 && <?= h($monitoreoAc->ph) ?><=22){
+                if(<?= h($monitoreoAc->ph) ?> >=5 && <?= h($monitoreoAc->ph) ?><=7){
                     var color = verde(); 
                 }else{
                    var color = rojo();
