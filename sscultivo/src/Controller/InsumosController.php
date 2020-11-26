@@ -43,7 +43,6 @@ class InsumosController extends AppController
         $insumo = $this->Insumos->get($id, [
             'contain' => ['Cultivos'],
         ]);
-
         $this->set(compact('insumo'));
     }
 
@@ -92,7 +91,6 @@ class InsumosController extends AppController
             }
             $this->Flash->error(__('The insumo could not be saved. Please, try again.'));
         }
-
         $opciones = array('conditions' => array('Cultivos.usuario_id' => $_SESSION['id']));
         $cultivos = $this->Insumos->Cultivos->find('All', $opciones);
         $this->set(compact('insumo', 'cultivos'));

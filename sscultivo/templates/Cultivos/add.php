@@ -5,6 +5,13 @@
  * @var \App\Model\Entity\Usuario $usuario
  */
 session_start();
+$opcion = [
+    'Seleccionar pez',
+    'carpa comun' => 'Carpa comun',
+    'tilapia del nilo' => 'Tilapia del nilo',
+    'pez gato' => 'Pez gato',
+    'truca arcoiris' => 'Truca arcoiris'
+];
 ?>
 <div class="container">
     <?= $this->Form->create($cultivo, ['class' => 'text-center border border-light p-4']) ?>
@@ -25,6 +32,18 @@ session_start();
                     'onchange' => 'desplegar();'
                 ])
                 ?>
+                <div id="peces" style="display:none;" class="mt-4">
+                    <select name="pez" id="pez" placeholder="Tipo de cultivo" class="form-control" onchange="desplegar();">
+                        <option value="0">Seleccionar tipo de cultivo</option>
+                        <option value="carpa comun">Carpa comun</option>
+                        <option value="tilapia del nilo">Tilapia del nilo</option>
+                        <option value="pez gato">Pez gato</option>
+                        <option value="truca arcoiris">Trucha arcoiris</option>
+                    </select>
+                    <?php
+                    echo $this->Form->control(' ', ['type' => 'number', 'id' => 'cantidad_pez', 'name' => 'cantidad_pez', 'min' => '1', 'placeholder' => 'Cantidad de peces', 'class' => 'form-control']);
+                    ?>
+                </div>
                 <div class="form-row" id="datos" style="display:none;">
                     <div class="col">
                         <?php
@@ -34,19 +53,6 @@ session_start();
                     <div class="col">
                         <?php
                         echo $this->Form->control(' ', ['id' => 'fecha', 'name' => 'fecha', 'type' => 'date', 'placeholder' => 'Fecha de creacion del cultivo', 'class' => 'form-control']);
-                        ?>
-                    </div>
-                </div>
-                <!-- campos Peces -->
-                <div class="form-row" id="peces" style="display:none;">
-                    <div class="col">
-                        <?php
-                        echo $this->Form->control(' ', ['id' => 'pez', 'name' => 'pez', 'placeholder' => 'Nombre del pez', 'class' => 'form-control']);
-                        ?>
-                    </div>
-                    <div class="col">
-                        <?php
-                        echo $this->Form->control(' ', ['type' => 'number', 'id' => 'cantidad_pez', 'name' => 'cantidad_pez', 'min' => '1', 'placeholder' => 'Cantidad de peces', 'class' => 'form-control']);
                         ?>
                     </div>
                 </div>
