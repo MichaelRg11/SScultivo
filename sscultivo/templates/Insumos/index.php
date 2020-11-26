@@ -8,6 +8,8 @@
 <div class="container">
     <center>
         <p class="h1 mb-2">Lista de insumos</p>
+        <?= $this->Html->link(__('<i class="far fa-file-alt" style="font-size:15px"> Generar todos reporte de todos los insumos</i>'), ['controller' => 'Reportes', 'action' => 'insumosusuario', $_SESSION['id']], ['escape' => false, 'class' => 'btn btn-warning offset-md-8 h1 mb-2', 'title' => 'Ver Cultivo']) ?>
+        <?= $this->Html->link(__('<i class="far fa-file-alt" style="font-size:15px"> Generar reporte de insumos mayor a 1M</i>'), ['controller' => 'Reportes', 'action' => 'insumosmayores', $_SESSION['id']], ['escape' => false, 'class' => 'btn btn-warning offset-md-8 h1 mb-2', 'title' => 'Ver Cultivo']) ?>
         <?= $this->Html->link(__('Nuevo insumo'), ['action' => 'add'], ['class' => 'btn btn-primary offset-md-8 h1 mb-2']) ?>
         <table class="table">
             <thead>

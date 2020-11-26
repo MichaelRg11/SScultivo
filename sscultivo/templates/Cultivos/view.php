@@ -53,6 +53,7 @@ session_start();
         </table>
         <div class="mb-2">
             <h4 class="heading"><?= __('Acciones') ?></h4>
+            <?= $this->Html->link(__('<i class="far fa-file-alt" style="font-size:15px"></i>'), ['controller' => 'Reportes', 'action' => 'cultivousuario', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-warning', 'title' => 'PDF del cultivo']) ?>
             <?= $this->Html->link(__('Editar cultivo '), ['action' => 'edit', $cultivo->id_cultivos], ['class' => 'btn btn-success']) ?>&nbsp;
             <?= $this->Form->postLink(__('Eliminar cultivo '), ['action' => 'delete', $cultivo->id_cultivos], ['confirm' => __('Are you sure you want to delete # {0}?', $cultivo->id_cultivos), 'class' => 'btn btn-success']) ?>&nbsp;
             <?= $this->Html->link(__('Volver a lista '), ['action' => 'index'], ['class' => 'btn btn-success']) ?>&nbsp;

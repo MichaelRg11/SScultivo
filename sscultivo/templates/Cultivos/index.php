@@ -5,10 +5,34 @@
  * @var \App\Model\Entity\Cultivo[]|\Cake\Collection\CollectionInterface $cultivos
  */
 ?>
-<div class="container">
+<div class="">
     <center>
-        <p class="h1 mb-2">Lista de cultivos</p>
-        <?= $this->Html->link(__('Nuevo cultivo'), ['action' => 'add'], ['class' => 'btn btn-primary offset-md-8 h1 mb-2']) ?>
+        <div class="container">
+            <p class="h1 mb-4">Lista de cultivos</p>
+            <div class="form-row mb-4" id="datos">
+                <div class="col">
+                    <input type="date" id="fecha1" class="form-control" onchange="">
+                </div>
+                <div class="col">
+                    <input type="date" id="fecha2" class="form-control" onchange="enviar();">
+                </div>
+                <div class="col">
+                    <?= $this->Form->button('Guardar cultivo', ['id' => 'btn', 'class' => 'btn btn-success', 'onchange', ';']) ?>
+                </div>
+            </div>
+
+            <script>
+                function enviar() {
+                    let fecha1 = document.getElementById("fecha1").value;
+                    let fecha2 = document.getElementById("fecha2").value;
+                    if ((fecha1 != null || fecha1 != 0) && (fecha2 != null || fecha2 != 0)) {
+                        return false;
+                    }
+                }
+            </script>
+
+            <?= $this->Html->link(__('Nuevo cultivo'), ['action' => 'add'], ['class' => 'btn btn-primary offset-md-8 mb-2']) ?>
+        </div>
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -36,7 +60,8 @@
                             <td><?= h($cultivo->planta) ?></td>
                             <td><?= $this->Number->format($cultivo->cantidad_planta) ?></td>
                             <td class="actions">
-                            <?= $this->Html->link(__('<i class="far fa-file-alt" style="font-size:15px"></i>'), ['controller' => 'Reportes', 'action' => 'cultivousuario', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-warning', 'title' => 'Ver Cultivo']) ?>
+                                <?= $this->Html->link(__('<i class="far fa-file-alt" style="font-size:15px"></i>'), ['controller' => 'Reportes', 'action' => 'insumoscultivo', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-warning', 'title' => 'PDF de los insumos del cultivo']) ?>
+                                <?= $this->Html->link(__('<i class="far fa-file-alt" style="font-size:15px"></i>'), ['controller' => 'Reportes', 'action' => 'seguimientocultivo', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-dark', 'title' => 'PDF de seguimiento de cultivo']) ?>
                                 <?= $this->Html->link(__('<i class="fa fa-eye" style="font-size:15px"></i>'), ['action' => 'view', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-success', 'title' => 'Ver Cultivo']) ?>
                                 <?= $this->Html->link(__('<i class="fas fa-pencil-alt" style="font-size:15px"></i>'), ['action' => 'edit', $cultivo->id_cultivos], ['escape' => false, 'class' => 'btn btn-info', 'title' => 'Editar Cultivo']) ?>
                                 <?= $this->Form->postLink(__('<i class="fa fa-trash" style="font-size:15px"></i>'), ['action' => 'delete', $cultivo->id_cultivos], ['confirm' => __('Estás seguro de que quieres eliminar el # {0}?', $cultivo->id), 'escape' => false, 'class' => 'btn btn-danger', 'title' => 'Eliminar Cliente']) ?>

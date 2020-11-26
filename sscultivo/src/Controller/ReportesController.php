@@ -1,88 +1,94 @@
 <?php
+
 declare(strict_types=1);
+
 namespace App\Controller;
+
 use Cake\ORM\TableRegistry;
+
 /**
  * Categorias Controller
  *
  * @property \App\Model\Table\CategoriasTable $Categorias
  * @method \App\Model\Entity\Categoria[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class ReportesController extends AppController {
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|null|void Renders view
-     */
-    public function index() {
-        
-    }
+class ReportesController extends AppController
+{
+  /**
+   * Index method
+   *
+   * @return \Cake\Http\Response|null|void Renders view
+   */
+  public function index()
+  {
+  }
 
-    public function ejemplo() {
-        require  ROOT . DS . 'vendor' . DS . 'tcpdf'. DS .'Pdf.php';
-        $pdf= new \Pdf();
-        $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('SSCULTIVO');
-        $pdf->SetTitle('Reporte Cultivo en Especifico');
-        $pdf->SetSubject('Informe General');
-        $pdf->SetKeywords('PDF, reportes');
-        $pdf->SetMargins(10, 25.2, 10);
-        $pdf->SetAutoPageBreak(TRUE, 13.4);
-        $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-        // add a page
-        $pdf->AddPage('P', 'LETTER');
-        $pdf->SetFont('times', '', 12, '', true);
+  public function ejemplo()
+  {
+    require  ROOT . DS . 'vendor' . DS . 'tcpdf' . DS . 'Pdf.php';
+    $pdf = new \Pdf();
+    $pdf->SetCreator(PDF_CREATOR);
+    $pdf->SetAuthor('SSCULTIVO');
+    $pdf->SetTitle('Reporte Cultivo en Especifico');
+    $pdf->SetSubject('Informe General');
+    $pdf->SetKeywords('PDF, reportes');
+    $pdf->SetMargins(10, 25.2, 10);
+    $pdf->SetAutoPageBreak(TRUE, 13.4);
+    $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+    $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+    // add a page
+    $pdf->AddPage('P', 'LETTER');
+    $pdf->SetFont('times', '', 12, '', true);
 
-        $xc = 105;
-        $yc = 100;
-        $r = 50;
+    $xc = 105;
+    $yc = 100;
+    $r = 50;
 
-        $pdf->SetFillColor(0, 0, 255);
-        $pdf->PieSector($xc, $yc, $r, 20, 120, 'FD', false, 0, 2);
+    $pdf->SetFillColor(0, 0, 255);
+    $pdf->PieSector($xc, $yc, $r, 20, 120, 'FD', false, 0, 2);
 
-        $pdf->SetFillColor(0, 255, 0);
-        $pdf->PieSector($xc, $yc, $r, 120, 250, 'FD', false, 0, 2);
+    $pdf->SetFillColor(0, 255, 0);
+    $pdf->PieSector($xc, $yc, $r, 120, 250, 'FD', false, 0, 2);
 
-        $pdf->SetFillColor(255, 0, 0);
-        $pdf->PieSector($xc, $yc, $r, 250, 20, 'FD', false, 0, 2);
+    $pdf->SetFillColor(255, 0, 0);
+    $pdf->PieSector($xc, $yc, $r, 250, 20, 'FD', false, 0, 2);
 
-        // write labels
-        $pdf->SetTextColor(255,255,255);
-        $pdf->Text(105, 65, 'BLUE');
-        $pdf->Text(60, 95, 'GREEN');
-        $pdf->Text(120, 115, 'RED');
+    // write labels
+    $pdf->SetTextColor(255, 255, 255);
+    $pdf->Text(105, 65, 'BLUE');
+    $pdf->Text(60, 95, 'GREEN');
+    $pdf->Text(120, 115, 'RED');
 
-        // ---------------------------------------------------------
+    // ---------------------------------------------------------
 
-        //Close and output PDF document
-        $pdf->Output('example_031.pdf', 'I');
+    //Close and output PDF document
+    $pdf->Output('example_031.pdf', 'I');
+  }
 
-    }
+  //--- Reporte de un cultivo en especifico ---
+  public function cultivousuario($id = null)
+  {
+    require  ROOT . DS . 'vendor' . DS . 'tcpdf' . DS . 'Pdf.php';
 
- //--- Reporte de un cultivo en especifico ---
-    public function cultivousuario($id = null) {
-        require  ROOT . DS . 'vendor' . DS . 'tcpdf'. DS .'Pdf.php';
-        
-        $pdf= new \Pdf();
-        $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('SSCULTIVO');
-        $pdf->SetTitle('Reporte Cultivo en Especifico');
-        $pdf->SetSubject('Informe General');
-        $pdf->SetKeywords('PDF, reportes');
-        $pdf->SetMargins(10, 25.2, 10);
-        $pdf->SetAutoPageBreak(TRUE, 13.4);
-        $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-        // add a page
-        $pdf->AddPage('P', 'LETTER');
-        $pdf->SetFont('times', '', 12, '', true); 
-        
-        $condit=array('conditions' => array('Cultivos.id_cultivos' => $id));
-        $cultivoUsuario =  TableRegistry::getTableLocator()->get('Cultivos')->find('all',$condit)->toArray();
+    $pdf = new \Pdf();
+    $pdf->SetCreator(PDF_CREATOR);
+    $pdf->SetAuthor('SSCULTIVO');
+    $pdf->SetTitle('Reporte Cultivo en Especifico');
+    $pdf->SetSubject('Informe General');
+    $pdf->SetKeywords('PDF, reportes');
+    $pdf->SetMargins(10, 25.2, 10);
+    $pdf->SetAutoPageBreak(TRUE, 13.4);
+    $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+    $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+    // add a page
+    $pdf->AddPage('P', 'LETTER');
+    $pdf->SetFont('times', '', 12, '', true);
 
-        foreach($cultivoUsuario  as $reg) {
-          $html='
+    $condit = array('conditions' => array('Cultivos.id_cultivos' => $id));
+    $cultivoUsuario =  TableRegistry::getTableLocator()->get('Cultivos')->find('all', $condit)->toArray();
+
+    foreach ($cultivoUsuario  as $reg) {
+      $html = '
          <br>
          <h3> Reporte de la Informacion de un Cultivo </h3>
          <table cellspacing="0" cellpadding="1" border="1">
@@ -90,63 +96,64 @@ class ReportesController extends AppController {
           <th> <b>Tipo de Cultivo</b> </th>
           <th> <b>Nombre</b> </th>
           <th> <b>Fecha</b> </th>';
-          if ($reg->tipo_cultivo == 'Acuaponico') {
-              $html.=
-               '<th> <b>Pez</b> </th>
+      if ($reg->tipo_cultivo == 'Acuaponico') {
+        $html .=
+          '<th> <b>Pez</b> </th>
                 <th> <b>N° Peces</b> </th>';
-          }
+      }
 
-          $html.='<th> <b>Planta</b> </th>
+      $html .= '<th> <b>Planta</b> </th>
           <th> <b>N° Plantas</b> </th>
          </tr>
            <tr>
-             <td> '.$reg->tipo_cultivo.'</td>
-             <td> '.$reg->nombre.'</td>
-             <td> '.$reg->fecha.'</td>';
+             <td> ' . $reg->tipo_cultivo . '</td>
+             <td> ' . $reg->nombre . '</td>
+             <td> ' . $reg->fecha . '</td>';
 
-              if ($reg->tipo_cultivo == 'Acuaponico') {
-              $html.=
-               '<td> '.$reg->pez.'</td>
-               <td> '.$reg->cantidad_pez.'</td>';
-              }
+      if ($reg->tipo_cultivo == 'Acuaponico') {
+        $html .=
+          '<td> ' . $reg->pez . '</td>
+               <td> ' . $reg->cantidad_pez . '</td>';
+      }
 
-             $html.='<td> '.$reg->planta.'</td>
-             <td> '.$reg->cantidad_planta.'</td>
+      $html .= '<td> ' . $reg->planta . '</td>
+             <td> ' . $reg->cantidad_planta . '</td>
             </tr>';
-              }
-        
-       $html.='</table>';
-       $pdf->writeHTML($html, true, false, true, false, '');
-       $pdf->lastPage();
-       $pdf->Output('Listado_cultivos_usuario.pdf', 'I');
- }
+    }
+
+    $html .= '</table>';
+    $pdf->writeHTML($html, true, false, true, false, '');
+    $pdf->lastPage();
+    $pdf->Output('Listado_cultivos_usuario.pdf', 'I');
+  }
 
   //--- Reporte de cultivos entre 2 fechas ---
- public function cultivofechas() {
-        require  ROOT . DS . 'vendor' . DS . 'tcpdf'. DS .'Pdf.php';
-        
-        $pdf= new \Pdf();
-        $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('SSCULTIVO');
-        $pdf->SetTitle('Reporte Cultivo entre Fechas');
-        $pdf->SetSubject('Informe General');
-        $pdf->SetKeywords('PDF, reportes');
-        $pdf->SetMargins(10, 25.2, 10);
-        $pdf->SetAutoPageBreak(TRUE, 13.4);
-        $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-        // add a page
-        $pdf->AddPage('L', 'LETTER');
-        $pdf->SetFont('times', '', 12, '', true); 
+  public function cultivofechas($fecha1 = null, $fecha2 = null)
+  {
+    require  ROOT . DS . 'vendor' . DS . 'tcpdf' . DS . 'Pdf.php';
 
-        $id_usuario = 1;
-        $fecha1 = '2020-10-23';
-        $fecha2 = '2020-11-30';
+    $pdf = new \Pdf();
+    $pdf->SetCreator(PDF_CREATOR);
+    $pdf->SetAuthor('SSCULTIVO');
+    $pdf->SetTitle('Reporte Cultivo entre Fechas');
+    $pdf->SetSubject('Informe General');
+    $pdf->SetKeywords('PDF, reportes');
+    $pdf->SetMargins(10, 25.2, 10);
+    $pdf->SetAutoPageBreak(TRUE, 13.4);
+    $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+    $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+    // add a page
+    $pdf->AddPage('L', 'LETTER');
+    $pdf->SetFont('times', '', 12, '', true);
 
-        $condit=array('conditions' => array('Cultivos.usuario_id' => $id_usuario, 'Cultivos.fecha >=' => $fecha1, 'Cultivos.fecha <=' => $fecha2));
-        $cultivoUsuario =  TableRegistry::getTableLocator()->get('Cultivos')->find('all',$condit)->toArray();
+    $id_usuario = 1;
+    $fecha1 = '2020-10-23';
+    $fecha2 = '2020-11-30';
 
-          $html='
+    $condit = array('conditions' => array('Cultivos.usuario_id' => $id_usuario, 'Cultivos.fecha >=' => $fecha1, 'Cultivos.fecha <=' => $fecha2));
+    $cultivoUsuario =  TableRegistry::getTableLocator()->get('Cultivos')->find('all', $condit)->toArray();
+
+    $html = '
         <br>
          <h3> Reporte de la Informacion de Cultivos entre Fechas </h3>
          <table cellspacing="0" cellpadding="1" border="1">
@@ -159,61 +166,61 @@ class ReportesController extends AppController {
           <th> <b>Planta</b> </th>
           <th> <b>N° Plantas</b> </th>
          </tr>
-         ';        
-          foreach($cultivoUsuario  as $reg) {
-           $html.='
+         ';
+    foreach ($cultivoUsuario  as $reg) {
+      $html .= '
            <tr>
-             <td> '.$reg->tipo_cultivo.'</td>
-             <td> '.$reg->nombre.'</td>
-             <td> '.$reg->fecha.'</td>
-             <td> '.$reg->pez.'</td>
-             <td> '.$reg->cantidad_pez.'</td>
-             <td> '.$reg->planta.'</td>
-             <td> '.$reg->cantidad_planta.'</td>
+             <td> ' . $reg->tipo_cultivo . '</td>
+             <td> ' . $reg->nombre . '</td>
+             <td> ' . $reg->fecha . '</td>
+             <td> ' . $reg->pez . '</td>
+             <td> ' . $reg->cantidad_pez . '</td>
+             <td> ' . $reg->planta . '</td>
+             <td> ' . $reg->cantidad_planta . '</td>
             </tr>';
-              }
-        
-       $html.='</table>';
-       $pdf->writeHTML($html, true, false, true, false, '');
-       $pdf->lastPage();
-       $pdf->Output('Listado_cultivos_fechas.pdf', 'I');
- }
+    }
 
- //--- Reporte del seguimiento de un cultivo ---
- public function seguimientocultivo() {
-        require  ROOT . DS . 'vendor' . DS . 'tcpdf'. DS .'Pdf.php';
-        
-        $pdf= new \Pdf();
-        $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('SSCULTIVO');
-        $pdf->SetTitle('Reporte Seguimiento de Cultivo');
-        $pdf->SetSubject('Informe General');
-        $pdf->SetKeywords('PDF, reportes');
-        $pdf->SetMargins(10, 25.2, 10);
-        $pdf->SetAutoPageBreak(TRUE, 13.4);
-        $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+    $html .= '</table>';
+    $pdf->writeHTML($html, true, false, true, false, '');
+    $pdf->lastPage();
+    $pdf->Output('Listado_cultivos_fechas.pdf', 'I');
+  }
 
-        $pdf->AddPage('L', 'LETTER');
-        $pdf->SetFont('times', '', 11, '', true);
+  //--- Reporte del seguimiento de un cultivo ---
+  public function seguimientocultivo($id = null)
+  {
+    require  ROOT . DS . 'vendor' . DS . 'tcpdf' . DS . 'Pdf.php';
 
-        // Infomación del Cultivo Elegido
-        $id_cultivo = 1; //Agregar id del cultivo como variable
-        $condit=array('conditions' => array('Cultivos.id_cultivos' => $id_cultivo));
-        $cultivoele =  TableRegistry::getTableLocator()->get('Cultivos')->find('all',$condit)->toArray();
+    $pdf = new \Pdf();
+    $pdf->SetCreator(PDF_CREATOR);
+    $pdf->SetAuthor('SSCULTIVO');
+    $pdf->SetTitle('Reporte Seguimiento de Cultivo');
+    $pdf->SetSubject('Informe General');
+    $pdf->SetKeywords('PDF, reportes');
+    $pdf->SetMargins(10, 25.2, 10);
+    $pdf->SetAutoPageBreak(TRUE, 13.4);
+    $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+    $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
 
-        foreach ($cultivoele as $cul) {
-          // Extraemos todos los monitores de dicho cultivo terreste
-          $condit1 = array('conditions' => array('MonitoreoTr.cultivos_id1' => $cul->id_cultivos));
-          $monitoreos = TableRegistry::getTableLocator()->get('MonitoreoTr')->find('all',$condit1)->toArray();
-          
-          if ($cul->tipo_cultivo == 'Tierra') {
-            $html='
+    $pdf->AddPage('L', 'LETTER');
+    $pdf->SetFont('times', '', 11, '', true);
+
+    // Infomación del Cultivo Elegido
+    $id_cultivo = $id; //Agregar id del cultivo como variable
+    $condit = array('conditions' => array('Cultivos.id_cultivos' => $id_cultivo));
+    $cultivoele =  TableRegistry::getTableLocator()->get('Cultivos')->find('all', $condit)->toArray();
+
+    foreach ($cultivoele as $cul) {
+      if ($cul->tipo_cultivo == 'Tierra') {
+        // Extraemos todos los monitores de dicho cultivo terreste
+        $condit1 = array('conditions' => array('MonitoreoTr.cultivos_id1' => $cul->id_cultivos));
+        $monitoreos = TableRegistry::getTableLocator()->get('MonitoreoTr')->find('all', $condit1)->toArray();
+        $html = '
             <br>
             <h3> Reporte del Seguimiento de un Cultivo </h3>
-             <h4> <b>Tipo de Cultivo: </b>'.$cul->tipo_cultivo.'</h4>
-             <h4> <b>Nombre: </b>'.$cul->nombre.'</h4>
-             <h4> <b>Fecha del Cultivo: </b>'.$cul->fecha.'</h4>
+             <h4> <b>Tipo de Cultivo: </b>' . $cul->tipo_cultivo . '</h4>
+             <h4> <b>Nombre: </b>' . $cul->nombre . '</h4>
+             <h4> <b>Fecha del Cultivo: </b>' . $cul->fecha . '</h4>
              
              <table cellspacing="0" cellpadding="1" border="1">
              <tr>
@@ -225,28 +232,29 @@ class ReportesController extends AppController {
               <th><b>Potasio</b></th>
               <th><b>CO2</b></th>
               <th><b>Comentario</b></th>
-             </tr>';        
-              foreach($monitoreos  as $reg) {
-               $html.='
+             </tr>';
+        foreach ($monitoreos  as $reg) {
+          $html .= '
                <tr>
-                 <td>'.$reg->fecha_TR.'</td>
-                 <td>'.$reg->ph.'</td>
-                 <td>'.$reg->humedad.'</td>
-                 <td>'.$reg->nitrogeno.'</td>
-                 <td>'.$reg->fosforo.'</td>
-                 <td>'.$reg->potasio.'</td>
-                 <td>'.$reg->dioxidoCB.'</td>
-                 <td>'.$reg->comentario.'</td>
+                 <td>' . $reg->fecha_TR . '</td>
+                 <td>' . $reg->ph . '</td>
+                 <td>' . $reg->humedad . '</td>
+                 <td>' . $reg->nitrogeno . '</td>
+                 <td>' . $reg->fosforo . '</td>
+                 <td>' . $reg->potasio . '</td>
+                 <td>' . $reg->dioxidoCB . '</td>
+                 <td>' . $reg->comentario . '</td>
                 </tr>';
-                }
-            $html.='</table>';
-          } else {
-            $html='
-             <!-- COMENTADO
-             <h4> <b>Tipo de Cultivo: </b>'.$cul->tipo_cultivo.'</h4>
-             <h4> <b>Nombre: </b>'.$cul->nombre.'</h4>
-             <h4> <b>Fecha del Cultivo: </b>'.$cul->fecha.'</h4> -->
-
+        }
+        $html .= '</table>';
+      } else {
+        // Extraemos todos los monitores de dicho cultivo acuaponico
+        $condit1 = array('conditions' => array('MonitoreoAc.cultivos_id2' => $cul->id_cultivos));
+        $monitoreos = TableRegistry::getTableLocator()->get('MonitoreoAc')->find('all', $condit1)->toArray();
+        $html = '
+             <h4> <b>Tipo de Cultivo: </b>' . $cul->tipo_cultivo . '</h4>
+             <h4> <b>Nombre: </b>' . $cul->nombre . '</h4>
+             <h4> <b>Fecha del Cultivo: </b>' . $cul->fecha . '</h4>
              <br> <br>
              <table cellspacing="0" cellpadding="1" border="1">
              <tr>
@@ -260,192 +268,200 @@ class ReportesController extends AppController {
               <th><b>Tiempo Crecimiento</b></th>
               <th><b>Exposicion Solar</b></th>
               <th><b>Comentario</b></th>
-             </tr>';        
-              foreach($monitoreos  as $reg) {
-                echo $reg->nombre;
-               $html.='
+             </tr>';
+        foreach ($monitoreos  as $reg) {
+          echo $reg->nombre;
+          $html .= '
                <tr>
-                 <td>'.$reg->fecha_AC.'</td>
-                 <td>'.$reg->ph.'</td>
-                 <td>'.$reg->temperatura.'</td>
-                 <td>'.$reg->nitrogeno.'</td>
-                 <td>'.$reg->nitritos.'</td>
-                 <td>'.$reg->oxigeno_disuelto.'</td>
-                 <td>'.$reg->proteina_alimento.'</td>
-                 <td>'.$reg->tiempo_crecimiento.'</td>
-                 <td>'.$reg->exposicion_solar.'</td>
-                 <td>'.$reg->comentario.'</td>
+                 <td>' . $reg->fecha_AC . '</td>
+                 <td>' . $reg->ph . '</td>
+                 <td>' . $reg->temperatura . '</td>
+                 <td>' . $reg->nitrogeno . '</td>
+                 <td>' . $reg->nitritos . '</td>
+                 <td>' . $reg->oxigeno_disuelto . '</td>
+                 <td>' . $reg->proteina_alimento . '</td>
+                 <td>' . $reg->tiempo_crecimiento . '</td>
+                 <td>' . $reg->exposicion_solar . '</td>
+                 <td>' . $reg->comentario . '</td>
                 </tr>';
-                }
-              $html.='</table>';
-          }
         }
-        
-       $pdf->writeHTML($html, true, false, true, false, '');
-       $pdf->lastPage();
-       $pdf->Output('Listado_cultivos_fechas.pdf', 'I');
- }
+        $html .= '</table>';
+      }
+    }
 
- //--- Reporte de los Insumos de un cultivo ---
- public function insumoscultivo() {
-        require  ROOT . DS . 'vendor' . DS . 'tcpdf'. DS .'Pdf.php';
-        
-        $pdf= new \Pdf();
-        $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('SSCULTIVO');
-        $pdf->SetTitle('Reporte Insumos de Cultivo');
-        $pdf->SetSubject('Informe General');
-        $pdf->SetKeywords('PDF, reportes');
-        $pdf->SetMargins(10, 25.2, 10);
-        $pdf->SetAutoPageBreak(TRUE, 13.4);
-        $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+    $pdf->writeHTML($html, true, false, true, false, '');
+    $pdf->lastPage();
+    $pdf->Output('Listado_cultivos_fechas.pdf', 'I');
+  }
 
-        $pdf->AddPage('P', 'LETTER');
-        $pdf->SetFont('times', '', 12, '', true);
+  //--- Reporte de los Insumos de un cultivo ---
+  public function insumoscultivo($id = null)
+  {
+    require  ROOT . DS . 'vendor' . DS . 'tcpdf' . DS . 'Pdf.php';
 
-        // Infomación de los Insumos del Cultivo Elegido
-        $id_cultivo = 2; //Agregar id del cultivo como variable
-        $condit=array('conditions' => array('Insumos.cultivos_id' => $id_cultivo));
-        $insumos =  TableRegistry::getTableLocator()->get('Insumos')->find('all',$condit)->toArray();
+    $pdf = new \Pdf();
+    $pdf->SetCreator(PDF_CREATOR);
+    $pdf->SetAuthor('SSCULTIVO');
+    $pdf->SetTitle('Reporte Insumos de Cultivo');
+    $pdf->SetSubject('Informe General');
+    $pdf->SetKeywords('PDF, reportes');
+    $pdf->SetMargins(10, 25.2, 10);
+    $pdf->SetAutoPageBreak(TRUE, 13.4);
+    $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+    $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
 
-          $html='
+    $pdf->AddPage('P', 'LETTER');
+    $pdf->SetFont('times', '', 12, '', true);
+
+    // Infomación de los Insumos del Cultivo Elegido
+    $id_cultivo = $id; //Agregar id del cultivo como variable
+    $condit = array('conditions' => array('Insumos.cultivos_id' => $id_cultivo));
+    $insumos =  TableRegistry::getTableLocator()->get('Insumos')->find('all', $condit)->toArray();
+
+    $html = '
               <br> <br>
              <table cellspacing="0" cellpadding="1" border="1">
              <tr>
               <th><b>Nombre</b></th>
               <th><b>Precio (c/u)</b></th>
+              <th><b>Cantidad</b></th>
               <th><b>Precio Total</b></th>
-             </tr>';        
-              foreach($insumos  as $reg) {
-               $html.='
-               <tr>
-                 <td>'.$reg->nombre.'</td>
-                 <td>'.$reg->precio_unitario.'</td>
-                 <td>'.$reg->precio_total.'</td>
-                </tr>';
-              }
-            $html.='</table>';
-        
-       $pdf->writeHTML($html, true, false, true, false, '');
-       $pdf->lastPage();
-       $pdf->Output('Listado_insumos_cultivo.pdf', 'I');
- }
+             </tr>';
+    foreach ($insumos  as $reg) {
+      $html .= '
+      <tr>
+      <td>' . $reg->nombre . '</td>
+      <td>' . $reg->precio_unitario . '</td>
+      <td>' . ($reg->precio_total / $reg->precio_unitario) . '</td>
+      <td>' . $reg->precio_total . '</td>
+    </tr>';
+    }
+    $html .= '</table>';
 
- //--- Reporte de insumos de dicho usuario ---
- public function insumosusuario() {
-        require  ROOT . DS . 'vendor' . DS . 'tcpdf'. DS .'Pdf.php';
-        
-        $pdf= new \Pdf();
-        $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('SSCULTIVO');
-        $pdf->SetTitle('Reporte Insumos de un Usuario');
-        $pdf->SetSubject('Informe General');
-        $pdf->SetKeywords('PDF, reportes');
-        $pdf->SetMargins(10, 25.2, 10);
-        $pdf->SetAutoPageBreak(TRUE, 13.4);
-        $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-        // add a page
-        $pdf->AddPage('P', 'LETTER');
-        $pdf->SetFont('times', '', 12, '', true); 
+    $pdf->writeHTML($html, true, false, true, false, '');
+    $pdf->lastPage();
+    $pdf->Output('Listado_insumos_cultivo.pdf', 'I');
+  }
 
-        $id_usuario = 1;
+  //--- Reporte de insumos de dicho usuario ---
+  public function insumosusuario($id = null)
+  {
+    require  ROOT . DS . 'vendor' . DS . 'tcpdf' . DS . 'Pdf.php';
 
-        $insumosUsuario =  TableRegistry::getTableLocator()->get('Insumos')->find('all')->distinct()->join([
-               'cultivos' => [
-                   'table' => 'Cultivos',
-                   'type' => 'INNER',
-                   'conditions' => 'Cultivos.id_cultivos = Insumos.cultivos_id'
-               ],
-               'usuarios' => [
-                   'table' => 'Usuarios',
-                   'type' => 'INNER',
-                   'conditions' => $id_usuario.' = Cultivos.usuario_id'
-               ]
-           ])->toArray();
+    $pdf = new \Pdf();
+    $pdf->SetCreator(PDF_CREATOR);
+    $pdf->SetAuthor('SSCULTIVO');
+    $pdf->SetTitle('Reporte Insumos de un Usuario');
+    $pdf->SetSubject('Informe General');
+    $pdf->SetKeywords('PDF, reportes');
+    $pdf->SetMargins(10, 25.2, 10);
+    $pdf->SetAutoPageBreak(TRUE, 13.4);
+    $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+    $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+    // add a page
+    $pdf->AddPage('P', 'LETTER');
+    $pdf->SetFont('times', '', 12, '', true);
 
-          $html='
+    $id_usuario = $id;
+
+    $insumosUsuario =  TableRegistry::getTableLocator()->get('Insumos')->find('all')->distinct()->join([
+      'cultivos' => [
+        'table' => 'Cultivos',
+        'type' => 'INNER',
+        'conditions' => 'Cultivos.id_cultivos = Insumos.cultivos_id'
+      ],
+      'usuarios' => [
+        'table' => 'Usuarios',
+        'type' => 'INNER',
+        'conditions' => $id_usuario . ' = Cultivos.usuario_id'
+      ]
+    ])->toArray();
+
+    $html = '
              <br> <br>
              <table cellspacing="0" cellpadding="1" border="1">
              <tr>
               <th> <b>Nombre</b></th>
               <th> <b>Precio (c/u)</b></th>
+              <th> <b>Cantidad </b></th>
               <th> <b>Precio Total</b></th>
              </tr>';
 
-        foreach ($insumosUsuario as $reg) {
-          $html.='
+    foreach ($insumosUsuario as $reg) {
+      $html .= '
             <tr>
-              <td>'.$reg->nombre.'</td>
-              <td>'.$reg->precio_unitario.'</td>
-              <td>'.$reg->precio_total.'</td>
+              <td>' . $reg->nombre . '</td>
+              <td>' . $reg->precio_unitario . '</td>
+              <td>' . ($reg->precio_total / $reg->precio_unitario) . '</td>
+              <td>' . $reg->precio_total . '</td>
             </tr>';
-        }
+    }
 
-       $html.='</table>';
-       $pdf->writeHTML($html, true, false, true, false, '');
-       $pdf->lastPage();
-       $pdf->Output('Listado_insumos_usuario.pdf', 'I');
- }
+    $html .= '</table>';
+    $pdf->writeHTML($html, true, false, true, false, '');
+    $pdf->lastPage();
+    $pdf->Output('Listado_insumos_usuario.pdf', 'I');
+  }
 
- //--- Reporte de aquellos insumos que tengan un monto superior a 1.000.000 ---
- public function insumosmayores() {
-        require  ROOT . DS . 'vendor' . DS . 'tcpdf'. DS .'Pdf.php';
-        
-        $pdf= new \Pdf();
-        $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('SSCULTIVO');
-        $pdf->SetTitle('Reporte Insumos con monto mayor a 1.000.000');
-        $pdf->SetSubject('Informe General');
-        $pdf->SetKeywords('PDF, reportes');
-        $pdf->SetMargins(10, 25.2, 10);
-        $pdf->SetAutoPageBreak(TRUE, 13.4);
-        $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
-        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-        // add a page
-        $pdf->AddPage('P', 'LETTER');
-        $pdf->SetFont('times', '', 12, '', true); 
+  //--- Reporte de aquellos insumos que tengan un monto superior a 1.000.000 ---
+  public function insumosmayores($id = null)
+  {
+    require  ROOT . DS . 'vendor' . DS . 'tcpdf' . DS . 'Pdf.php';
 
-        $id_usuario = 1;
+    $pdf = new \Pdf();
+    $pdf->SetCreator(PDF_CREATOR);
+    $pdf->SetAuthor('SSCULTIVO');
+    $pdf->SetTitle('Reporte Insumos con monto mayor a 1.000.000');
+    $pdf->SetSubject('Informe General');
+    $pdf->SetKeywords('PDF, reportes');
+    $pdf->SetMargins(10, 25.2, 10);
+    $pdf->SetAutoPageBreak(TRUE, 13.4);
+    $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+    $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+    // add a page
+    $pdf->AddPage('P', 'LETTER');
+    $pdf->SetFont('times', '', 12, '', true);
 
-        $insumosUsuario =  TableRegistry::getTableLocator()->get('Insumos')->find('all')->distinct()->join([
-               'cultivos' => [
-                   'table' => 'Cultivos',
-                   'type' => 'INNER',
-                   'conditions' => 'Cultivos.id_cultivos = Insumos.cultivos_id'
-               ],
-               'usuarios' => [
-                   'table' => 'Usuarios',
-                   'type' => 'INNER',
-                   'conditions' => $id_usuario.' = Cultivos.usuario_id'
-               ]
-           ])->toArray();
+    $id_usuario = $id;
 
-          $html='
+    $insumosUsuario =  TableRegistry::getTableLocator()->get('Insumos')->find('all')->distinct()->join([
+      'cultivos' => [
+        'table' => 'Cultivos',
+        'type' => 'INNER',
+        'conditions' => 'Cultivos.id_cultivos = Insumos.cultivos_id'
+      ],
+      'usuarios' => [
+        'table' => 'Usuarios',
+        'type' => 'INNER',
+        'conditions' => $id_usuario . ' = Cultivos.usuario_id'
+      ]
+    ])->toArray();
+
+    $html = '
              <br> <br>
              <table cellspacing="0" cellpadding="1" border="1">
              <tr>
               <th> <b>Nombre</b></th>
               <th> <b>Precio (c/u)</b></th>
+              <th> <b>Cantidad</b></th>
               <th> <b>Precio Total</b></th>
              </tr>';
 
-        foreach ($insumosUsuario as $reg) {
-          if ($reg->precio_total > 1000000) {
-            $html.='
+    foreach ($insumosUsuario as $reg) {
+      if ($reg->precio_total > 1000000) {
+        $html .= '
             <tr>
-              <td>'.$reg->nombre.'</td>
-              <td>'.$reg->precio_unitario.'</td>
-              <td>'.$reg->precio_total.'</td>
+              <td>' . $reg->nombre . '</td>
+              <td>' . $reg->precio_unitario . '</td>
+              <td>' . ($reg->precio_total / $reg->precio_unitario) . '</td>
+              <td>' . $reg->precio_total . '</td>
             </tr>';
-          }
-        }
+      }
+    }
 
-       $html.='</table>';
-       $pdf->writeHTML($html, true, false, true, false, '');
-       $pdf->lastPage();
-       $pdf->Output('Listado_insumos_mayores.pdf', 'I');
- }
-    
+    $html .= '</table>';
+    $pdf->writeHTML($html, true, false, true, false, '');
+    $pdf->lastPage();
+    $pdf->Output('Listado_insumos_mayores.pdf', 'I');
+  }
 }

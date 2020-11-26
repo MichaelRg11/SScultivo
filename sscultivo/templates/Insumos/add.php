@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Insumo $insumo
@@ -20,7 +21,7 @@ endforeach;
         <label>Cantidad</label>
         <input type="number" name="cantidad" id="cantidad" class="form-control" min='1' onchange="precio()">
         <?php
-        echo $this->Form->control('precio_total', ['id' => 'precio_total', 'name' => 'precio_total', 'class' => 'form-control', 'disabled']);
+        echo $this->Form->control('precio_total', ['class' => 'form-control', 'readonly']);
         echo $this->Form->control('cultivos_id', ['options' => $opcion, 'class' => 'form-control mb-4']);
         ?>
         <?= $this->Form->button('Guardar monitoreo', ['class' => 'btn btn-success', 'onchange' => 'precio()']) ?>
@@ -33,7 +34,7 @@ endforeach;
         let cantidad = document.getElementById("cantidad").value;
         let total = 0;
         total = precio * cantidad;
-        let valor = document.getElementById("precio_total");
+        let valor = document.getElementById("precio-total");
         valor.value = total;
     }
 </script>
