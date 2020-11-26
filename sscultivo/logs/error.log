@@ -12465,3 +12465,783 @@ Stack trace:
 #18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
 #19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
 #20 {main}
+2020-11-26 22:11:15 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:15 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:16 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:16 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:17 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webfonts could not be found. in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webfonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php:40
+
+Request URL: /webfonts/fa-solid-900.woff2
+Referer URL: http://localhost/SScultivo/sscultivo/css/all.css
+
+
+2020-11-26 22:11:17 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:17 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:17 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webfonts could not be found. in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webfonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php:40
+
+Request URL: /webfonts/fa-solid-900.woff
+Referer URL: http://localhost/SScultivo/sscultivo/css/all.css
+
+
+2020-11-26 22:11:17 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:17 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:17 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webfonts could not be found. in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webfonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php:40
+
+Request URL: /webfonts/fa-solid-900.ttf
+Referer URL: http://localhost/SScultivo/sscultivo/css/all.css
+
+
+2020-11-26 22:11:17 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:17 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:19 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:19 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:20 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webfonts could not be found. in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webfonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php:40
+
+Request URL: /webfonts/fa-regular-400.woff2
+Referer URL: http://localhost/SScultivo/sscultivo/css/all.css
+
+
+2020-11-26 22:11:20 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:20 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:20 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webfonts could not be found. in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webfonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php:40
+
+Request URL: /webfonts/fa-solid-900.woff2
+Referer URL: http://localhost/SScultivo/sscultivo/css/all.css
+
+
+2020-11-26 22:11:20 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:20 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:20 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webfonts could not be found. in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webfonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php:40
+
+Request URL: /webfonts/fa-regular-400.woff
+Referer URL: http://localhost/SScultivo/sscultivo/css/all.css
+
+
+2020-11-26 22:11:20 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:20 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:20 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webfonts could not be found. in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webfonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php:40
+
+Request URL: /webfonts/fa-solid-900.woff
+Referer URL: http://localhost/SScultivo/sscultivo/css/all.css
+
+
+2020-11-26 22:11:20 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:20 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:20 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webfonts could not be found. in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webfonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php:40
+
+Request URL: /webfonts/fa-regular-400.ttf
+Referer URL: http://localhost/SScultivo/sscultivo/css/all.css
+
+
+2020-11-26 22:11:20 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:20 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:21 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webfonts could not be found. in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webfonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php:40
+
+Request URL: /webfonts/fa-solid-900.ttf
+Referer URL: http://localhost/SScultivo/sscultivo/css/all.css
+
+
+2020-11-26 22:11:21 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:21 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:23 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:23 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:24 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webfonts could not be found. in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webfonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php:40
+
+Request URL: /webfonts/fa-solid-900.woff2
+Referer URL: http://localhost/SScultivo/sscultivo/css/all.css
+
+
+2020-11-26 22:11:24 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:24 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:24 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webfonts could not be found. in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webfonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php:40
+
+Request URL: /webfonts/fa-solid-900.woff
+Referer URL: http://localhost/SScultivo/sscultivo/css/all.css
+
+
+2020-11-26 22:11:24 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:24 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:24 Error: [Cake\Http\Exception\MissingControllerException] Controller class Webfonts could not be found. in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Webfonts',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php:90
+- D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php:40
+
+Request URL: /webfonts/fa-solid-900.ttf
+Referer URL: http://localhost/SScultivo/sscultivo/css/all.css
+
+
+2020-11-26 22:11:24 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:24 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+2020-11-26 22:11:34 Warning: Unable to save request. This is probably due to concurrent requests.
+2020-11-26 22:11:34 Warning: PDOException: SQLSTATE[HY000]: General error: 11 database disk image is malformed in D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+Stack trace:
+#0 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(178): PDOStatement->execute(NULL)
+#1 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(150): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(341): Cake\Database\Statement\SqliteStatement->execute()
+#4 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(70): Cake\Database\Connection->Cake\Database\{closure}()
+#5 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(344): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Query.php(249): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(2042): Cake\Database\Query->execute()
+#8 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_insert(Object(DebugKit\Model\Entity\Request), Array)
+#9 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1835): Cake\ORM\Table->_processSave(Object(DebugKit\Model\Entity\Request), Object(ArrayObject))
+#10 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1535): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Database\Connection.php(691): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1536): Cake\Database\Connection->transactional(Object(Closure))
+#13 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\ORM\Table.php(1836): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\ToolbarService.php(283): Cake\ORM\Table->save(Object(DebugKit\Model\Entity\Request))
+#15 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(66): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(73): DebugKit\Middleware\DebugKitMiddleware->process(Object(Cake\Http\ServerRequest), Object(Cake\Http\Runner))
+#17 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Runner.php(58): Cake\Http\Runner->handle(Object(Cake\Http\ServerRequest))
+#18 D:\Xampp\htdocs\SScultivo\sscultivo\vendor\cakephp\cakephp\src\Http\Server.php(90): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(App\Application))
+#19 D:\Xampp\htdocs\SScultivo\sscultivo\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
