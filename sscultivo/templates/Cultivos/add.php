@@ -34,7 +34,7 @@ $opcion = [
                 ?>
                 <div id="peces" style="display:none;" class="mt-4">
                     <select name="pez" id="pez" placeholder="Tipo de cultivo" class="form-control" onchange="desplegar();">
-                        <option value="0">Seleccionar tipo de cultivo</option>
+                        <option value="0">Seleccionar tipo pez</option>
                         <option value="carpa comun">Carpa comun</option>
                         <option value="tilapia del nilo">Tilapia del nilo</option>
                         <option value="pez gato">Pez gato</option>
