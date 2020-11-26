@@ -71,6 +71,7 @@ session_start();
                 <thead class="bg-primary">
                     <tr>
                     <th scope="col">PH</th>
+                    <th scope="col">HUMEDAD (%)</th>
                     <th scope="col">NITROGENO (lb/acre)</th>
                     <th scope="col">FOSFORO (lb/acre)</th>
                     <th scope="col">POTASIO (lb/acre)   </th>
@@ -78,6 +79,7 @@ session_start();
                 </thead>
                 <tbody>
                     <tr class="table-primary">
+                    <td>5.5 - 7.0</td>
                     <td>5.5 - 7.0</td>
                     <td>60 - 175</td>
                     <td>100 - 150</td>
@@ -90,6 +92,7 @@ session_start();
         </div>
      </div>   
 </div>
+    <center>
         <div class="mb-2">
             <h4 class="heading"><?= __('Acciones') ?></h4>
             <?= $this->Html->link(__('Editar monitoreo Tr'), ['action' => 'edit', $monitoreoTr->idmonitoreo_TR], ['class' => 'btn btn-success']) ?>
@@ -97,21 +100,7 @@ session_start();
             <?= $this->Html->link(__('Lista de monitoreo Tr'), ['action' => 'index'], ['class' => 'btn btn-success']) ?>
             <?= $this->Html->link(__('Nuevo monitoreo TR'), ['action' => 'add'], ['class' => 'btn btn-success']) ?>
         </div>
-       
-<br>
-<br>
-    
-    <div class="row">
-        <div class="col-lg-3">
-        </div>
-        <div class="col-lg-6">
-            <canvas id="myChart" width="50" height="50"></canvas>
-        </div>
-        <div class="col-lg-3">      
-        </div>
-    </div>
-    
-
+    </center>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -130,7 +119,7 @@ session_start();
                     <?= h($monitoreoTr->nitrogeno) ?>,<?= h($monitoreoTr->fosforo) ?>,<?= h($monitoreoTr->potasio) ?>
                         ],
                     backgroundColor: [colorDinamicoPH(), colorDinamicoHumedad(), colorDinamicoNitrogeno(), 
-                    colorDinamicoFosforo(), colorDinamicoPotasio(), colorDinamicoDC()                        
+                    colorDinamicoFosforo(), colorDinamicoPotasio()                       
                     ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',
@@ -162,7 +151,7 @@ session_start();
     }
 
     function colorDinamicoPH(){
-        if(<?= h($monitoreoTr->ph) ?>>=15 && <?= h($monitoreoTr->ph) ?><=22){
+        if(<?= h($monitoreoTr->ph) ?>>=5.5 && <?= h($monitoreoTr->ph) ?><=7.0){
             var color = verde(); 
         }else{
             var color = rojo();
@@ -172,7 +161,7 @@ session_start();
     
 
     function colorDinamicoHumedad(){
-        if(<?= h($monitoreoTr->humedad) ?>>=15 &&<?= h($monitoreoTr->humedad) ?><=22){
+        if(<?= h($monitoreoTr->humedad) ?>>=60 &&<?= h($monitoreoTr->humedad) ?><=175){
             var color = verde(); 
         }else{
             var color = rojo();
@@ -181,7 +170,7 @@ session_start();
     }
 
     function colorDinamicoNitrogeno(){
-        if(<?= h($monitoreoTr->nitrogeno) ?>>=15 &&<?= h($monitoreoTr->nitrogeno) ?><=22){
+        if(<?= h($monitoreoTr->nitrogeno) ?>>=60 &&<?= h($monitoreoTr->nitrogeno) ?><=175){
             var color = verde(); 
         }else{
             var color = rojo();
@@ -192,7 +181,7 @@ session_start();
     <?= h($monitoreoTr->dioxidoCB) ?>
 
     function colorDinamicoFosforo(){
-        if(<?= h($monitoreoTr->fosforo) ?>>=15 &&<?= h($monitoreoTr->fosforo) ?><=22){
+        if(<?= h($monitoreoTr->fosforo) ?>>=100 &&<?= h($monitoreoTr->fosforo) ?><=150){
             var color = verde(); 
         }else{
             var color = rojo();
@@ -201,7 +190,7 @@ session_start();
     }
 
     function colorDinamicoPotasio(){
-        if(<?= h($monitoreoTr->potasio) ?>>=15 &&<?= h($monitoreoTr->potasio) ?><=22){
+        if(<?= h($monitoreoTr->potasio) ?>>=145 &&<?= h($monitoreoTr->potasio) ?><=180){
             var color = verde(); 
         }else{
             var color = rojo();
@@ -209,13 +198,5 @@ session_start();
         return color;        
     }
 
-    function colorDinamicoDC(){
-        if(<?= h($monitoreoTr->dioxidoCB) ?>>=15 &&<?= h($monitoreoTr->dioxidoCB) ?><=22){
-            var color = verde(); 
-        }else{
-            var color = rojo();
-        }     
-        return color;        
-    }
 
 </script>
