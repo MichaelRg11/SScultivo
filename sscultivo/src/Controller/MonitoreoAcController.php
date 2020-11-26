@@ -53,6 +53,7 @@ class MonitoreoAcController extends AppController
      */
     public function add()
     {
+        session_start();
         $monitoreoAc = $this->MonitoreoAc->newEmptyEntity();
         if ($this->request->is('post')) {
             $monitoreoAc = $this->MonitoreoAc->patchEntity($monitoreoAc, $this->request->getData());
@@ -62,9 +63,8 @@ class MonitoreoAcController extends AppController
             }
             $this->Flash->error(__('The monitoreo ac could not be saved. Please, try again.'));
         }
-        $consulta = "SELECT * FROM cultivos WHERE usuario_id = ";
-        $opciones = array('conditions' => array('cultivos.tipo_cultivo' => "Tierra"));
-        $cultivos = $this->MonitoreoAc->Cultivos->query($consulta, $opciones);
+        $opciones = array('conditions' => array('cultivos.tipo_cultivo' => "Acuaponico", 'Cultivos.usuario_id' => $_SESSION['id']));
+        $cultivos = $this->MonitoreoAc->Cultivos->find('All', $opciones);
         $this->set(compact('monitoreoAc', 'cultivos'));
     }
 

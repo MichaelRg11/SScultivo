@@ -54,6 +54,7 @@ class MonitoreoTrController extends AppController
      */
     public function add()
     {
+        session_start();
         $monitoreoTr = $this->MonitoreoTr->newEmptyEntity();
         if ($this->request->is('post')) {
             $monitoreoTr = $this->MonitoreoTr->patchEntity($monitoreoTr, $this->request->getData());
@@ -65,7 +66,7 @@ class MonitoreoTrController extends AppController
             $this->Flash->error(__('The monitoreo tr could not be saved. Please, try again.'));
         }
         $consulta = "SELECT * FROM cultivos WHERE usuario_id = ";
-        $opciones = array('conditions' => array('cultivos.tipo_cultivo' => "Tierra"));
+        $opciones = array('conditions' => array('cultivos.tipo_cultivo' => "Tierra", 'Cultivos.usuario_id' => $_SESSION['id']));
         $cultivos = $this->MonitoreoTr->Cultivos->query($consulta, $opciones);
         $this->set(compact('monitoreoTr', 'cultivos'));
     }
