@@ -24,7 +24,6 @@ class MonitoreoAcController extends AppController
             'contain' => ['Cultivos'],
         ];
         $opciones = array('conditions' => array('Cultivos.usuario_id' => $_SESSION['id']));
-        $monitoreoAcs = $this->paginate($this->MonitoreoAc->find('All', $opciones));
         $monitoreoAc = $this->paginate($this->MonitoreoAc->find('All', $opciones));
 
         $this->set(compact('monitoreoAc'));
@@ -42,8 +41,9 @@ class MonitoreoAcController extends AppController
         $monitoreoAc = $this->MonitoreoAc->get($id, [
             'contain' => [],
         ]);
-
-        $this->set(compact('monitoreoAc'));
+        $opciones = array('conditions' => array('cultivos.id_cultivos' => $id));
+        $cultivos = $this->MonitoreoAc->Cultivos->find('All', $opciones);
+        $this->set(compact('monitoreoAc', 'cultivos'));
     }
 
     /**
