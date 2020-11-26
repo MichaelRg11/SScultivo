@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Insumo $insumo
@@ -9,6 +8,7 @@ foreach ($cultivos as $cultivo) :
     $opcion += [$cultivo->id_cultivos => $cultivo->id_cultivos . " " .  $cultivo->nombre];
 endforeach;
 ?>
+
 <div class="container" style="width: 50%;">
     <?= $this->Form->create($insumo, ['class' => 'text-center border border-light p-4']) ?>
     <center>
