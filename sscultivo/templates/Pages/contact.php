@@ -13,7 +13,7 @@
     <div class="container">
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">Contactanos
-        <small>Subheading</small>
+        <small></small>
       </h1>
     </div>
   </div>
@@ -23,9 +23,9 @@
     <div class="breadcrumb-main">
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
+          <a href="index.html">Inicio</a>
         </li>
-        <li class="breadcrumb-item active">Contact</li>
+        <li class="breadcrumb-item active">Contacto</li>
       </ol>
     </div>
 
@@ -38,18 +38,18 @@
       </div>
       <!-- Contact Details Column -->
       <div class="col-lg-4 mb-4 contact-right">
-        <h3>Contact Details</h3>
+        <h3>Detalles Contacto</h3>
         <p>
-          3481 Melrose Place
-          <br>Beverly Hills, CA 90210
+          Calle 90 110-95
+          <br>Barranquilla, Colombia
           <br>
         </p>
         <p>
-          <abbr title="Phone">P</abbr>: (123) 456-7890
+          <abbr title="Phone">P</abbr>: 398 5849
         </p>
         <p>
           <abbr title="Email">E</abbr>:
-          <a href="mailto:name@example.com">name@example.com
+          <a href="mailto:sscultivo@hotmail.com">sscultivo@hotmail.com
           </a>
         </p>
         <p>
@@ -63,36 +63,36 @@
     <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
     <div class="row">
       <div class="col-lg-8 mb-4 contact-left">
-        <h3>Send us a Message</h3>
+        <h3>Envianos un mensaje</h3>
         <form name="sentMessage" id="contactForm" novalidate>
           <div class="control-group form-group">
             <div class="controls">
-              <label>Full Name:</label>
+              <label>Nombres:</label>
               <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
               <p class="help-block"></p>
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
-              <label>Phone Number:</label>
+              <label>Telefono:</label>
               <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
-              <label>Email Address:</label>
+              <label>Correo:</label>
               <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
-              <label>Message:</label>
+              <label>Mensaje:</label>
               <textarea rows="5" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
             </div>
           </div>
           <div id="success"></div>
           <!-- For success/fail messages -->
-          <button type="submit" class="btn btn-primary" id="sendMessageButton">Send Message</button>
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Enviar Mensaje</button>
         </form>
       </div>
 

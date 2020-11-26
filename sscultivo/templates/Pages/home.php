@@ -18,21 +18,21 @@ session_start();
                 <div class="carousel-item active" style="background-image: url('https://images5.alphacoders.com/105/1050845.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Bienvenidos a SSCultivo</h3>
-                        <p>Una gram opcion para monitorear tus cultivos</p>
+                        <p>Un servicio que te permite monitorear tus cultivos de manera mas facil.</p>
                     </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
                 <div class="carousel-item" style="background-image: url('https://miro.medium.com/max/4800/1*MC0blcVlAb4NNKY8koLfiw.jpeg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Bienvenidos a SSCultivo</h3>
-                        <p>Una gran opcion para el cuidado de tus plantas</p>
+                        <p>El mejor cuidado para cultivos acuaponicos y terrestres</p>
                     </div>
                 </div>
                 <!-- Slide Three - Set the background image for this slide in the line below -->
                 <div class="carousel-item" style="background-image: url('https://mk0softsecrets4cv09b.kinstacdn.com/wp-content/uploads/sites/11/2020/09/what-to-do-with-male-cannabis-plants-04-1024x576.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Bienvenidos a SSCultivo</h3>
-                        <p>A Una gran opcion para el cuidado de tus plantas</p>
+                        <p>Una gran opcion para el cuidado de tus plantas</p>
                     </div>
                 </div>
             </div>
@@ -49,48 +49,48 @@ session_start();
     <!-- Page Content -->
     <div class="container">
         <div class="services-bar">
-            <h1 class="my-4">Our Best Services </h1>
+            <h1 class="my-4">Nuestros Servicios </h1>
             <!-- Services Section -->
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="card h-100">
-                        <h4 class="card-header">Garden Fence</h4>
+                        <h4 class="card-header">Gestion de cultivos</h4>
                         <div class="card-img">
-                            <img class="img-fluid" src="img/services-img-01.jpg" alt="" />
+                            <img class="img-fluid" src="img/related-pro-01.jpg" alt="" />
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                            <p class="card-text">Manejo y registro de la informacion basica y necesaria de tus cultivos, de manera mas detallada.</p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <a href="#" class="btn btn-primary">Conoce mas</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
                     <div class="card h-100">
-                        <h4 class="card-header">Garden Watering</h4>
+                        <h4 class="card-header">Gestion de Seguimiento & Monitoreo</h4>
                         <div class="card-img">
-                            <img class="img-fluid" src="img/services-img-02.jpg" alt="" />
+                            <img class="img-fluid" src="img/related-pro-02.jpg" alt="" />
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                            <p class="card-text">Estadisticas y calculos de tus cultivos para que puedas prevenir y ahorrar tiempo frente a posibles complicaciones.</p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <a href="#" class="btn btn-primary">Conoce mas</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
                     <div class="card h-100">
-                        <h4 class="card-header">Garden Supplies</h4>
+                        <h4 class="card-header">Gestion de insumos</h4>
                         <div class="card-img">
-                            <img class="img-fluid" src="img/services-img-03.jpg" alt="" />
+                            <img class="img-fluid" src="img/related-pro-03.jpg" alt="" />
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                            <p class="card-text"> Inventario de los insumos requeridos por los cultivos en vigencia para que tengas un panorama de tus gastos.</p>
                         </div>
                         <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <a href="#" class="btn btn-primary">Conoce mas</a>
                         </div>
                     </div>
                 </div>
@@ -101,27 +101,27 @@ session_start();
         <div class="about-main">
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>Welcome to N & LW Lawn Care</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <h5>Our smart approach</h5>
+                    <h2>Bienvenido a SSCultivo</h2>
+                    <p>Queremos ser tus mejores aliados en tu trabajo diario para que puedas acceder a toda la informacion de tus cultivos desde la web.</p>
+                    <h5>Nuestro enfoque</h5>
                     <ul>
-                        <li>Sed at tellus eu quam posuere mattis.</li>
-                        <li>Phasellus quis erat et enim laoreet posuere ac porttitor ipsum.</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Duis porttitor odio pellentesque mollis vulputate.</li>
-                        <li>Quisque ac eros non ex hendrerit vehicula.</li>
+                        <li>Seguimos el ODS 9 como meta para aportar al desarrollo del mundo.</li>
+                        <li>Buscamos que puedas acceder a herramientas tecnologicas para mejorar la infraestructura de tus cultivos.</li>
+                        <li>Trabajamos con cultivos acuaponicos como contribucion y promocion para el medio ambiente.</li>
+                        <li>Ahorro en tiempo y costos.</li>
+                        <li>Seguridad en tus procesos.</li>
                     </ul>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+                    <p> Somos una empresa comprometida con la contribucion y desarrollo de las nuevas tecnologias a traves de actividades agronomas.</p>
                 </div>
                 <div class="col-lg-6">
-                    <img class="img-fluid rounded" src="img/about-img.jpg" alt="" />
+                    <img class="img-fluid rounded" src="img/cultivo.jpg" alt="" />
                 </div>
             </div>
             <!-- /.row -->
         </div>
         <!-- Portfolio Section -->
         <div class="portfolio-main">
-            <h2>Our Portfolio</h2>
+            <h2>Experiencias clientes</h2>
             <div class="row">
                 <div class="col-lg-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
@@ -220,10 +220,10 @@ session_start();
         <!-- Get In Touch Now Section -->
         <div class="row mb-4">
             <div class="col-md-8">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+                <p>Escribenos y te asesoraremos con todo lo necesario para tus cultivos.</p>
             </div>
             <div class="col-md-4">
-                <a class="btn btn-lg btn-secondary btn-block" href="#">Get In Touch Now</a>
+                <a class="btn btn-lg btn-secondary btn-block" href="#">Ponte en contacto ahora</a>
             </div>
         </div>
     </div>
