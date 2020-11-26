@@ -30,8 +30,8 @@
                     }
                 }
             </script>
-
-            <?= $this->Html->link(__('Nuevo cultivo'), ['action' => 'add'], ['class' => 'btn btn-primary offset-md-8 mb-2']) ?>
+            <?= $this->Html->link(__('<i class="fas fa-plus" style="font-size:15px"> Agregar nuevo cultivo</i>'), ['action' => 'add'], ['escape' => false, 'class' => 'btn btn-primary offset-md-8 mb-2']) ?>
+           
         </div>
         <div class="table-responsive">
             <table class="table">
