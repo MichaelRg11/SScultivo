@@ -17,7 +17,7 @@
                 <?= $this->Html->link(__('<i class="far fa-file-alt" style="font-size:15px"> Generar reporte de insumos mayor a 1M</i>'), ['controller' => 'Reportes', 'action' => 'insumosmayores', $_SESSION['id']], ['escape' => false, 'class' => 'btn btn-dark', 'title' => 'Ver Cultivo']) ?>
                 </div>
                 <div class="col">
-                <?= $this->Html->link(__('<i class="fas fa-plus" style="font-size:15px"> Agragar nuevo insumo</i>'), ['action' => 'add'], ['escape' => false, 'class' => 'btn btn-primary']) ?>
+                <?= $this->Html->link(__('<i class="fas fa-plus" style="font-size:15px"> Agregar nuevo insumo</i>'), ['action' => 'add'], ['escape' => false, 'class' => 'btn btn-primary']) ?>
                 </div>
             </div>
         </div>

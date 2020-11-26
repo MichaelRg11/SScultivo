@@ -24,7 +24,7 @@ endforeach;
         echo $this->Form->control('precio_total', ['class' => 'form-control', 'readonly']);
         echo $this->Form->control('cultivos_id', ['options' => $opcion, 'class' => 'form-control mb-4']);
         ?>
-        <?= $this->Form->button('Guardar monitoreo', ['class' => 'btn btn-success', 'onchange' => 'precio()']) ?>
+        <?= $this->Form->button('Guardar Insumo', ['class' => 'btn btn-success', 'onchange' => 'precio()']) ?>
         <?= $this->Form->end() ?>
     </center>
 </div>

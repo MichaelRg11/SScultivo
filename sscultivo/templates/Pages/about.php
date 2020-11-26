@@ -12,7 +12,7 @@
 		<div class="container">
 			<!-- Page Heading/Breadcrumbs -->
 			<h1 class="mt-4 mb-3">Acerca de
-				<small>Subheading</small>
+				<small></small>
 			</h1>
 		</div>
 	</div>
@@ -32,10 +32,10 @@
 		<div class="about-main">
 			<div class="row">
 				<div class="col-lg-6">
-					<img class="img-fluid rounded mb-4" src="../img/about-img.jpg" alt="" />
+					<img class="img-fluid rounded mb-4" src="../img/cultivo.jpg" alt="" />
 				</div>
 				<div class="col-lg-6">
-					<h2>About Modern Business</h2>
+					<h2>Acerca de nuestro modelo de negocios</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
@@ -46,13 +46,13 @@
 
 		<!-- Team Members -->
 		<div class="team-members-box">
-			<h2>Our Team</h2>
+			<h2>Nuestro Team</h2>
 			<div class="row">
 				<div class="col-lg-4 mb-4">
 					<div class="card h-100 text-center">
 						<img class="card-img-top" src="../img/team_01.jpg" alt="" />
 						<div class="card-body">
-							<h4 class="card-title">Team Member</h4>
+							<h4 class="card-title">Miembro del equipo</h4>
 							<h6 class="card-subtitle mb-2 text-muted">Position</h6>
 							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
 						</div>
@@ -69,7 +69,7 @@
 					<div class="card h-100 text-center">
 						<img class="card-img-top" src="../img/team_02.jpg" alt="" />
 						<div class="card-body">
-							<h4 class="card-title">Team Member</h4>
+							<h4 class="card-title">Miembro del equipo</h4>
 							<h6 class="card-subtitle mb-2 text-muted">Position</h6>
 							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
 						</div>
@@ -86,7 +86,7 @@
 					<div class="card h-100 text-center">
 						<img class="card-img-top" src="../img/team_03.jpg" alt="" />
 						<div class="card-body">
-							<h4 class="card-title">Team Member</h4>
+							<h4 class="card-title">Miembro del equipo</h4>
 							<h6 class="card-subtitle mb-2 text-muted">Position</h6>
 							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
 						</div>
@@ -104,7 +104,7 @@
 		</div>
 		<!-- Our Customers -->
 		<div class="customers-box">
-			<h2>Our Customers</h2>
+			<h2>Nuestros Clientes</h2>
 			<div class="row">
 				<div class="col-lg-2 col-sm-4 mb-4">
 					<img class="img-fluid" src="../img/logo_01.png" alt="" />
