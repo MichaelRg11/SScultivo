@@ -9073,6 +9073,7 @@ Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
 Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 [main] - ROOT\webroot\index.php, line 40
 
+<<<<<<< Updated upstream
 2020-11-26 16:59:14 Notice: Notice (8): Undefined index: id in [D:\Xampp\htdocs\SScultivo\sscultivo\src\Controller\CultivosController.php, line 27]
 Request URL: /cultivos
 Referer URL: http://localhost/SScultivo/sscultivo/cultivos/add
@@ -9081,6 +9082,20 @@ Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php
 DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
 App\Controller\CultivosController::index() - APP/Controller\CultivosController.php, line 27
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
+=======
+2020-11-26 16:03:09 Notice: Notice (8): Undefined index: id in [C:\xampp\htdocs\sscultivo\sscultivo\templates\Cultivos\add.php, line 72]
+Request URL: /cultivos/add
+Referer URL: http://localhost/sscultivo/sscultivo/cultivos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Cultivos\add.php, line 72
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::render() - CORE\src\View\View.php, line 764
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 538
+>>>>>>> Stashed changes
 Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
 Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
 Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
@@ -9100,8 +9115,14 @@ Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
 Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 [main] - ROOT\webroot\index.php, line 40
 
+<<<<<<< Updated upstream
 2020-11-26 16:59:21 Notice: Notice (8): Undefined index: id in [D:\Xampp\htdocs\SScultivo\sscultivo\src\Controller\CultivosController.php, line 27]
 Request URL: /cultivos
+=======
+2020-11-26 16:03:39 Notice: Notice (8): Undefined index: id in [C:\xampp\htdocs\sscultivo\sscultivo\src\Controller\CultivosController.php, line 27]
+Request URL: /cultivos
+Referer URL: http://localhost/sscultivo/sscultivo/monitoreo-ac
+>>>>>>> Stashed changes
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
 DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
@@ -9126,6 +9147,7 @@ Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
 Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 [main] - ROOT\webroot\index.php, line 40
 
+<<<<<<< Updated upstream
 2020-11-26 17:44:35 Notice: Notice (8): Undefined variable: cultivo in [D:\Xampp\htdocs\SScultivo\sscultivo\templates\Insumos\index.php, line 11]
 Request URL: /insumos
 Referer URL: http://localhost/SScultivo/sscultivo/monitoreo-ac
@@ -9133,6 +9155,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
 DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
 include - ROOT\templates\Insumos\index.php, line 11
+=======
+2020-11-26 16:03:42 Notice: Notice (8): Undefined index: id in [C:\xampp\htdocs\sscultivo\sscultivo\templates\Cultivos\add.php, line 72]
+Request URL: /cultivos/add
+Referer URL: http://localhost/sscultivo/sscultivo/cultivos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Cultivos\add.php, line 72
+>>>>>>> Stashed changes
 Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
 Cake\View\View::_render() - CORE\src\View\View.php, line 1134
 Cake\View\View::render() - CORE\src\View\View.php, line 764
@@ -9157,6 +9188,7 @@ Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
 Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 [main] - ROOT\webroot\index.php, line 40
 
+<<<<<<< Updated upstream
 2020-11-26 17:44:35 Notice: Notice (8): Trying to get property 'id_cultivos' of non-object in [D:\Xampp\htdocs\SScultivo\sscultivo\templates\Insumos\index.php, line 11]
 Request URL: /insumos
 Referer URL: http://localhost/SScultivo/sscultivo/monitoreo-ac
@@ -9220,6 +9252,15 @@ Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
 DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
 App\Controller\ReportesController::ejemplo() - APP/Controller\ReportesController.php, line 42
+=======
+2020-11-26 16:03:45 Notice: Notice (8): Undefined index: id in [C:\xampp\htdocs\sscultivo\sscultivo\src\Controller\CultivosController.php, line 27]
+Request URL: /cultivos
+Referer URL: http://localhost/sscultivo/sscultivo/monitoreo-ac
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+App\Controller\CultivosController::index() - APP/Controller\CultivosController.php, line 27
+>>>>>>> Stashed changes
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
 Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
 Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
@@ -9240,12 +9281,21 @@ Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
 Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 [main] - ROOT\webroot\index.php, line 40
 
+<<<<<<< Updated upstream
 2020-11-26 19:12:55 Notice: Notice (8): Undefined variable: style4 in [C:\xampp\htdocs\sscultivo\sscultivo\src\Controller\ReportesController.php, line 45]
 Request URL: /reportes/ejemplo
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
 DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
 App\Controller\ReportesController::ejemplo() - APP/Controller\ReportesController.php, line 45
+=======
+2020-11-26 16:03:46 Notice: Notice (8): Undefined index: id in [C:\xampp\htdocs\sscultivo\sscultivo\src\Controller\MonitoreoAcController.php, line 26]
+Request URL: /monitoreo-ac
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+App\Controller\MonitoreoAcController::index() - APP/Controller\MonitoreoAcController.php, line 26
+>>>>>>> Stashed changes
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
 Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
 Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
@@ -9266,12 +9316,21 @@ Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
 Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 [main] - ROOT\webroot\index.php, line 40
 
+<<<<<<< Updated upstream
 2020-11-26 19:12:55 Notice: Notice (8): Undefined variable: style3 in [C:\xampp\htdocs\sscultivo\sscultivo\src\Controller\ReportesController.php, line 46]
 Request URL: /reportes/ejemplo
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
 DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
 App\Controller\ReportesController::ejemplo() - APP/Controller\ReportesController.php, line 46
+=======
+2020-11-26 16:03:47 Notice: Notice (8): Undefined index: id in [C:\xampp\htdocs\sscultivo\sscultivo\src\Controller\MonitoreoTrController.php, line 27]
+Request URL: /monitoreo-tr
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+App\Controller\MonitoreoTrController::index() - APP/Controller\MonitoreoTrController.php, line 27
+>>>>>>> Stashed changes
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
 Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
 Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
@@ -9292,6 +9351,7 @@ Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
 Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 [main] - ROOT\webroot\index.php, line 40
 
+<<<<<<< Updated upstream
 2020-11-26 19:13:08 Notice: Notice (8): Undefined variable: style4 in [C:\xampp\htdocs\sscultivo\sscultivo\src\Controller\ReportesController.php, line 45]
 Request URL: /reportes/ejemplo
 Trace:
@@ -9299,6 +9359,20 @@ Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php
 DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
 App\Controller\ReportesController::ejemplo() - APP/Controller\ReportesController.php, line 45
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
+=======
+2020-11-26 16:04:08 Notice: Notice (8): Undefined index: id in [C:\xampp\htdocs\sscultivo\sscultivo\templates\Cultivos\add.php, line 72]
+Request URL: /cultivos/add
+Referer URL: http://localhost/sscultivo/sscultivo/cultivos
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\Cultivos\add.php, line 72
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::render() - CORE\src\View\View.php, line 764
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 538
+>>>>>>> Stashed changes
 Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
 Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
 Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
@@ -9318,6 +9392,7 @@ Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
 Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 [main] - ROOT\webroot\index.php, line 40
 
+<<<<<<< Updated upstream
 2020-11-26 19:13:08 Notice: Notice (8): Undefined variable: style3 in [C:\xampp\htdocs\sscultivo\sscultivo\src\Controller\ReportesController.php, line 46]
 Request URL: /reportes/ejemplo
 Trace:
@@ -9325,6 +9400,19 @@ Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php
 DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
 App\Controller\ReportesController::ejemplo() - APP/Controller\ReportesController.php, line 46
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
+=======
+2020-11-26 17:12:14 Notice: Notice (8): Undefined variable: planta in [C:\xampp\htdocs\sscultivo\sscultivo\templates\MonitoreoAc\view.php, line 67]
+Request URL: /monitoreo-ac/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\MonitoreoAc\view.php, line 67
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::render() - CORE\src\View\View.php, line 764
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 538
+>>>>>>> Stashed changes
 Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
 Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
 Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
@@ -9344,6 +9432,7 @@ Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
 Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 [main] - ROOT\webroot\index.php, line 40
 
+<<<<<<< Updated upstream
 2020-11-26 20:04:25 Notice: Notice (8): Undefined index: id in [C:\xampp\htdocs\sscultivo\sscultivo\src\Controller\MonitoreoAcController.php, line 26]
 Request URL: /monitoreo-ac
 Referer URL: http://localhost/sscultivo/sscultivo/insumos
@@ -9352,6 +9441,19 @@ Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php
 DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
 App\Controller\MonitoreoAcController::index() - APP/Controller\MonitoreoAcController.php, line 26
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
+=======
+2020-11-26 17:12:47 Notice: Notice (8): Trying to get property 'planta' of non-object in [C:\xampp\htdocs\sscultivo\sscultivo\templates\MonitoreoAc\view.php, line 67]
+Request URL: /monitoreo-ac/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\MonitoreoAc\view.php, line 67
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::render() - CORE\src\View\View.php, line 764
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 538
+>>>>>>> Stashed changes
 Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
 Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
 Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
@@ -9371,6 +9473,7 @@ Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
 Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 [main] - ROOT\webroot\index.php, line 40
 
+<<<<<<< Updated upstream
 2020-11-26 20:04:29 Notice: Notice (8): Undefined index: id in [C:\xampp\htdocs\sscultivo\sscultivo\src\Controller\MonitoreoAcController.php, line 26]
 Request URL: /monitoreo-ac
 Trace:
@@ -9378,6 +9481,19 @@ Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php
 DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
 App\Controller\MonitoreoAcController::index() - APP/Controller\MonitoreoAcController.php, line 26
 Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
+=======
+2020-11-26 17:21:02 Notice: Notice (8): Trying to get property 'planta' of non-object in [C:\xampp\htdocs\sscultivo\sscultivo\templates\MonitoreoAc\view.php, line 65]
+Request URL: /monitoreo-ac/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\MonitoreoAc\view.php, line 65
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::render() - CORE\src\View\View.php, line 764
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 538
+>>>>>>> Stashed changes
 Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
 Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
 Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77

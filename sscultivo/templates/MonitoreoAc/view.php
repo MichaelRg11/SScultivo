@@ -8,7 +8,8 @@ foreach ($cultivos as $cultivo) :
     $planta = $cultivo->planta;
     $peces = $cultivo->peces;
 endforeach;
-?>
+ ?>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css">
 
@@ -22,6 +23,7 @@ endforeach;
             <?= $this->Html->link(__('New Monitoreo Ac'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
+    
     <div class="column-responsive column-80">
         <div class="monitoreoAc view content">
             <h3><?= h($monitoreoAc->idmonitoreo_AC) ?></h3>
@@ -60,7 +62,7 @@ endforeach;
                 </tr>
                 <tr>
                     <th><?= __('Comentario') ?></th>
-                    <td><?= h($monitoreoAc->comentario) ?></td>
+                    <td><?= h($monitoreoAc->comentario) ?></td>                 
                 </tr>
                 <tr>
                     <th><?= __('Idmonitoreo AC') ?></th>
@@ -165,7 +167,7 @@ endforeach;
     }
 
     function colorDinamicoTemperatura(){
-                if(<?=h($monitoreoAc->temperatura) ?>>=15 && <?=h($monitoreoAc->temperatura) ?><=22){
+                if(<?=h($monitoreoAc->temperatura) ?>>=25 && <?=h($monitoreoAc->temperatura) ?><=30){
                     var color = verde(); 
                 }else{
                    var color = rojo();
@@ -174,7 +176,7 @@ endforeach;
     }
 
     function colorDinamicoNitrogeno(){
-                if(<?= h($monitoreoAc->nitrogeno) ?>>=15 && <?= h($monitoreoAc->nitrogeno) ?><=22){
+                if(<?= h($monitoreoAc->nitrogeno) ?> <= 1.5){
                     var color = verde(); 
                 }else{
                    var color = rojo();
@@ -183,7 +185,7 @@ endforeach;
     }
 
     function colorDinamicoNitritos(){
-                if(<?= h($monitoreoAc->nitritos) ?>>=15 && <?= h($monitoreoAc->nitritos) ?><=22){
+                if(<?= h($monitoreoAc->nitritos) ?> <= 1){
                     var color = verde(); 
                 }else{
                    var color = rojo();
@@ -192,7 +194,7 @@ endforeach;
     }
 
     function colorDinamicoOD(){
-                if(<?= h($monitoreoAc->oxigeno_disuelto) ?>>=15 && <?= h($monitoreoAc->oxigeno_disuelto) ?><=22){
+                if(<?= h($monitoreoAc->oxigeno_disuelto) ?> >=4){
                     var color = verde(); 
                 }else{
                    var color = rojo();
@@ -201,7 +203,7 @@ endforeach;
     }
 
     function colorDinamicopPA(){
-                if(<?= h($monitoreoAc->proteina_alimento) ?>>=15 && <?= h($monitoreoAc->proteina_alimento) ?><=22){
+                if(<?= h($monitoreoAc->proteina_alimento) ?>>=25 && <?= h($monitoreoAc->proteina_alimento) ?><=40){
                     var color = verde(); 
                 }else{
                    var color = rojo();
@@ -209,23 +211,23 @@ endforeach;
                 return color;        
     }
 
-    function colorDinamicopPH(){
-                if(<?= h($monitoreoAc->ph) ?> >=5 && <?= h($monitoreoAc->ph) ?><=7){
+    function colorDinamicopPH(){      
+                if(<?= h($monitoreoAc->ph) ?> >=5.5 && <?= h($monitoreoAc->ph) ?><=7){
                     var color = verde(); 
                 }else{
                    var color = rojo();
                 }     
-                return color;        
+                return color;
+            
     }
 
     function colorDinamicopTC(){
-                if(<?= h($monitoreoAc->tiempo_crecimiento) ?>>=15 && <?= h($monitoreoAc->tiempo_crecimiento) ?><=22){
+                if(<?= h($monitoreoAc->tiempo_crecimiento) ?>>=6 && <?= h($monitoreoAc->tiempo_crecimiento) ?><=10){
                     var color = verde(); 
                 }else{
                    var color = rojo();
                 }     
                 return color;        
     }
-
 
 </script>
