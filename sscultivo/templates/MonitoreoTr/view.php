@@ -169,7 +169,7 @@ session_start();
 
 
     function colorDinamicoHumedad() {
-        if (<?= h($monitoreoTr->humedad) ?> >= 15 && <?= h($monitoreoTr->humedad) ?> <= 22) {
+        if (<?= h($monitoreoTr->humedad) ?> >= 60 && <?= h($monitoreoTr->humedad) ?> <= 70) {
             var color = verde();
         } else {
             var color = rojo();
